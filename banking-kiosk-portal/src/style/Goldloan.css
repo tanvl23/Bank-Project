@@ -1,0 +1,33 @@
+.loan-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loan-title {
+    font-size: 28px;
+    color: #ff9800;
+  }
+  
+  .loan-description {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .loan-features {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .loan-features li {
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .apply-button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
