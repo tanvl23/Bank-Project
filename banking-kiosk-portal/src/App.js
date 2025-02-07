@@ -5,6 +5,10 @@ import './style/Home.css'
 import './style/Accinfo.css'
 import './style/Loans.css'
 import './style/Bank-services.css'
+import './style/Atm.css'
+import './style/Chkbook.css'
+import './style/Locker.css'
+import './style/Digital.css'
 import Login from './components/Login';
 
 

@@ -29,58 +29,58 @@ const BankingServices = () => {
         <div className="services-container">
 
         <div className="services-item" onClick={() => {
-            navigate('/tax-services')
+            navigate('/tax')
           }}>
-            <Link to="/tax-services" className="bank-container">
+            <Link to="/tax" className="bank-container">
               {/* <img src={taxIcon} alt="Tax Services" /> */}
               <p>Tax Services</p>
             </Link>
           </div>
           
           <div className="services-item" onClick={() => {
-            navigate('/checkbook')
+            navigate('/chkbook')
           }}>
-            <Link to="/checkbook" className="bank-container">
+            <Link to="/chkbook" className="bank-container">
               {/* <img src={} alt="Checkbook Services" /> */}
               <p>Checkbook Services</p>
             </Link>
           </div>
 
           
-          <div className="services-item" onClick={() => navigate("/bill-services")}>
-          <Link to="/checkbook" className="bank-container">
+          <div className="services-item" onClick={() => navigate("/bill")}>
+          <Link to="/bill" className="bank-container">
             {/* <img src={billIcon} alt="Bill Utility Services" /> */}
             <p>Bill Utility Services</p>
             </Link>
           </div>
 
 
-          <div className="services-item" onClick={() => navigate("/atm-services")}>
-          <Link to="/checkbook" className="bank-container">
+          <div className="services-item" onClick={() => navigate("/atmser")}>
+          <Link to="/atmser" className="bank-container">
             {/* <img src={atmIcon} alt="ATM Services" /> */}
             <p> ATM Services</p>
             </Link>
           </div>
 
 
-          <div className="services-item" onClick={() => navigate("/locker-services")}>
-          <Link to="/checkbook" className="bank-container">
+          <div className="services-item" onClick={() => navigate("/locker")}>
+          <Link to="/locker" className="bank-container">
             {/* <img src={lockerIcon} alt="Locker Services" /> */}
             <p> Locker Services</p>
             </Link>
           </div>
 
 
-          <div className="services-item" onClick={() => navigate("/digital-services")}>
-          <Link to="/checkbook" className="bank-container">
+          <div className="services-item" onClick={() => navigate("/digital")}>
+          <Link to="/digital" className="bank-container">
             {/* <img src={digitalIcon} alt="Digital Services" /> */}
             <p>Digital Services</p>
             </Link>
           </div>
 
 
-          <div className="services-item" onClick={() => navigate("/insurance-services")}>
-          <Link to="/checkbook" className="bank-container">
+          <div className="services-item" onClick={() => navigate("/insurance")}>
+          <Link to="/insurance" className="bank-container">
             {/* <img src={insuranceIcon} alt="Insurance Services" /> */}
             <p>Insurance Services</p>
             </Link>
