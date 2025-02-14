@@ -3,7 +3,7 @@ const { pool } = require("./db-client");
 class LoginHelper {
     async getUser(userBody) {
         try {
-            const query = `SELECT * FROM login_table WHERE user_name = $1`;
+            const query = 'SELECT * FROM login_table WHERE user_name = $1';
             const params = [userBody.EmailId]
 
             const result = await pool.query(query, params)

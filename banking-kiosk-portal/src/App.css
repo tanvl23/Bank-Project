@@ -1,87 +1,59 @@
 .login-container {
   position: relative;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
+  overflow: hidden; /* Prevent overflow */
 }
 
-.app-name{
-  margin-bottom: 7%;
-}
-
-/* .carousel-container {
-  width: 80%; 
-  max-width: 600px;
-  margin: auto; 
-  overflow: hidden;
-}
-
-.login-image {
-  width: 100%;
-  height: 350px;
-  object-fit: contain; 
-} */
-
-/* Ensure horizontal scrolling */
-.carousel-inner {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-item {
-  transition: transform 0.8s ease-in-out; /* Smooth horizontal scroll */
-  flex: 0 0 100%;
-}
-
-/* .carousel-indicators {
+.login-container::before {
+  content: '';
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('assets/login1.png'); /* Replace with your image path */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  opacity: 0.5; /* Adjust opacity for fading effect */
+  z-index: 1; /* Place it behind the content */
 }
 
-.carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
+.app-name {
+  margin-bottom: 7%;
+  z-index: 2; /* Ensure this is above the background */
+  position: relative; /* Position relative to the container */
 }
 
-.carousel-indicators .active {
-  background-color: white;
-}
+/* Center the login box */
+.login-box {
+  
+    /* Existing styles... */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.caption-title {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-} */
-
-
-.login-box{
   width: 30%;
   position: absolute;
-  top: 150px;
-  right: 2%;
+  top: 50%; /* Move to the middle of the container */
+  left: 50%; /* Move to the middle of the container */
+  transform: translate(-50%, -50%); /* Center it by adjusting its position */
   height: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
-  /* background-color: red; */
+  z-index: 2; /* Ensure this is above the background */
 
+  background-color: white; /* Card background color */
+  border-radius: 15px; /* Rounded corners */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); Shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Padding inside the card */
 }
 
-.login-btn-container{
+
+.login-btn-container {
   width: 95%;
   margin-top: 5%;
 }
@@ -98,14 +70,14 @@
   cursor: pointer;
 }
 
-.login-system-text{
+.login-system-text {
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
   color: #810055;
-  text-align: left;
+  text-align: center;
 }
 
-.login-input{
+.login-input {
   display: flex;
   flex-direction: column;
   height: 50%;
@@ -113,12 +85,12 @@
   width: 90%;
 }
 
-.login-input-label{
+.login-input-label {
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-.login-input-field{
+.login-input-field {
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   padding: 2%;

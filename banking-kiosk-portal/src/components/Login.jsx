@@ -40,13 +40,13 @@ export default function Login(props) {
       <div className="login-page">
       <div className="carousel-container">
       <Carousel fade>
-<Carousel.Item>
+{/* <Carousel.Item>
     <Image className="login-image" src={login1} alt="First slide"/>
     < Carousel.Caption>
     <div className="caption-title">Developed By Vidyalaknar Polytechnic Students</div>
     </Carousel.Caption>
-</Carousel.Item>
-<Carousel.Item>
+</Carousel.Item> */}
+{/* <Carousel.Item>
     <Image className="login-image" src={login2}alt="Second slide"/>
     < Carousel.Caption>
     <div className="caption-title">Developed By Vidyalankar Polytechnic Students</div>
@@ -69,7 +69,7 @@ export default function Login(props) {
     < Carousel.Caption>
     <div className="caption-title t">Developed By Vidyalaknar Polytechnic Students</div>
     </Carousel.Caption>
-</Carousel.Item>
+</Carousel.Item> */}
 </Carousel>
 </div>
 
