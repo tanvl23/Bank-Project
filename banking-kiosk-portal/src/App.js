@@ -9,6 +9,17 @@ import './style/Atm.css'
 import './style/Chkbook.css'
 import './style/Locker.css'
 import './style/Digital.css'
+import './style/custsupport.css'
+import './style/LocateUs.css'
+import './style/Rules.css'
+import './style/Updates.css'
+import './style/SavingAcc.css'
+import './style/Recurring.css'
+import './style/Fixed.css'
+import './style/Salary.css'
+import './style/Current.css'
+
+
 import Login from './components/Login';
 
 

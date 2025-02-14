@@ -1,4 +1,4 @@
-import { useNavigate } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Header from './Header';
 import Footer from './Footer';
 import hloan from '../assets/home.png'
@@ -7,12 +7,12 @@ import bloan from '../assets/busi.png'
 import ploan from '../assets/pers.png'
 import gloan from '../assets/gold.png'
 import vloan from '../assets/car.png'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React from "react";
 
 
 const LoanServices = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   return (
     <div>
       <Header />
@@ -48,18 +48,19 @@ const LoanServices = () => {
 
 
             <div className="loan-card" onClick={() => {
-              navigate('./busiloan')
+              navigate('/busiloan')
+
             }}>
+              {/* <img src="/accinfo.png" alt="Account Information" /> */}
               <Link to="/busiloan" className="icon-container">
-                <img src={bloan} alt="Business Loan" />
+                <img src={bloan} alt="Home Loan" />
                 <p>Business Loan</p>
               </Link>
-              {/* <img src="/loans-icon.png" alt="Loans" /> */}
-              {/* <p>Loans</p> */}
+              {/* <p>Account Information</p> */}
             </div>
 
             <div className="loan-card" onClick={() => {
-              navigate('./perloan')
+              navigate('/perloan')
             }}>
               <Link to="/perloan" className="icon-container">
                 <img src={ploan} />
@@ -70,7 +71,7 @@ const LoanServices = () => {
             </div>
 
             <div className="loan-card" onClick={() => {
-              navigate('./goldloan')
+              navigate('/goldloan')
             }}>
               <Link to="/goldloan" className="icon-container">
                 <img src={gloan} />
@@ -79,7 +80,7 @@ const LoanServices = () => {
             </div>
 
             <div className="loan-card" onClick={() => {
-              navigate('./vehloan')
+              navigate('/vehloan')
             }}>
               <Link to="/vehloan" className="icon-container">
                 <img src={vloan} alt="Vehicle Loan" />

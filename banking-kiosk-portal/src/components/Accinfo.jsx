@@ -23,7 +23,7 @@ const AccountInfo = () => {
 
       {/* Account Icons */}
       <div className="account-icons">
-        <Link to="/saving" className="acc-container">
+        <Link to="/savingAcc" className="acc-container">
           <img src={savingIcon} alt="Saving Account" />
           <p>Saving Account</p>
         </Link>
