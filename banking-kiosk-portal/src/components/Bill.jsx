@@ -12,8 +12,9 @@ const BillPaymentServices = () => {
   return (
     <div className="banking-container">
           <Header/>
-      <h2 className="service-title">Bill Payment Services</h2>
-      <div className="service-info">
+    
+      <div className="bill-info">
+      <h2 >Bill Payment Services</h2>
         <h3>Overview</h3>
         <p>Bill payment services allow customers to pay utility bills such as electricity, water, gas, and phone bills through online banking.</p>
 

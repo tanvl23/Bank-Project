@@ -1,13 +1,13 @@
-/* .hmloan-container {
+/* .eduloan-container {
     width: 100%;
     margin-top: 8px;
     text-align: center;
     background: linear-gradient(135deg, #8f94fb);
-    box-shadow: 20px 10px 20px rgba(3, 93, 18, 0.2);
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
     color: rgb(2, 59, 6);
   } */
   
-  .loc-title {
+  .eduloan-title {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
@@ -18,26 +18,27 @@
   }
   
   /* List & Paragraph Styles */
-  .loc-info {
+  .eduloan-info {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     padding-top: 5px;
     background-image: url('../assets/bacground.png');
     background-size: cover;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .loc-info-in {
+  .eduloan-info-in {
     padding-right: 10px;
   }
-  
-  .loc-info h2 {
+
+  .eduloan-info h1 {
     color: #1e721b;
     text-align: center;
     font-size: 35px;
     font-weight: bold;
   }
-  .loc-info h3 {
+  
+  .eduloan-info h3 {
     color: #1e721b;
     text-align: center;
     font-size: 24px;
@@ -45,8 +46,8 @@
   }
   
   /* Animation for List Items */
-  .loc-info ol li,
-  .loc-info ul li {
+  .eduloan-info ol li,
+  .eduloan-info ul li {
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -56,15 +57,15 @@
     animation: fadeInLeft 0.5s ease-out forwards;
   }
   
-  .loc-info ol li:nth-child(1), .loc-info ul li:nth-child(1) { animation-delay: 0.3s; }
-  .loc-info ol li:nth-child(2), .loc-info ul li:nth-child(2) { animation-delay: 0.6s; }
-  .loc-info ol li:nth-child(3), .loc-info ul li:nth-child(3) { animation-delay: 0.9s; }
-  .loc-info ol li:nth-child(4), .loc-info ul li:nth-child(4) { animation-delay: 1.2s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(5) { animation-delay: 1.5s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(6) { animation-delay: 1.7s; }
+  .eduloan-info ol li:nth-child(1), .eduloan-info ul li:nth-child(1) { animation-delay: 0.3s; }
+  .eduloan-info ol li:nth-child(2), .eduloan-info ul li:nth-child(2) { animation-delay: 0.6s; }
+  .eduloan-info ol li:nth-child(3), .eduloan-info ul li:nth-child(3) { animation-delay: 0.9s; }
+  .eduloan-info ol li:nth-child(4), .eduloan-info ul li:nth-child(4) { animation-delay: 1.2s; }
+  .eduloan-info ol li:nth-child(5), .eduloan-info ul li:nth-child(5) { animation-delay: 1.5s; }
+  .eduloan-info ol li:nth-child(6), .eduloan-info ul li:nth-child(6) { animation-delay: 1.7s; }
   
   /* Animation for Paragraphs */
-  .loc-info p {
+  .eduloan-info p {
     font-size: 18px;
     color: #444;
     opacity: 0;
@@ -73,9 +74,9 @@
   }
   
   /* Delaying each paragraph */
-  .loc-info p:nth-of-type(1) { animation-delay: 0.4s; }
-  .loc-info p:nth-of-type(2) { animation-delay: 0.8s; }
-  .loc-info p:nth-of-type(3) { animation-delay: 1.2s; }
+  .eduloan-info p:nth-of-type(1) { animation-delay: 0.4s; }
+  .eduloan-info p:nth-of-type(2) { animation-delay: 0.8s; }
+  .eduloan-info p:nth-of-type(3) { animation-delay: 1.2s; }
   
   /* Letter-by-Letter Animation */
   @keyframes fadeInScale {
@@ -101,13 +102,13 @@
   }
   
   /* 3D Effect */
-  .loc-container,
-  .loc-info {
+  .eduloan-container,
+  .eduloan-info {
     perspective: 1000px;
   }
   
-  .loc-title, 
-  .loc-info h3 {
+  .eduloan-title, 
+  .eduloan-info h3 {
     transform-style: preserve-3d;
     transform: rotateX(10deg);
     animation: text3D 1s ease-in-out forwards;
@@ -123,6 +124,3 @@
         opacity: 1;
     }
   }
-  
-  
-  

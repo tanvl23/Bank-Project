@@ -18,15 +18,15 @@ const BankUpdates = () => {
         <div>
         <Header />
       <div className="bank-updates-page">
-      <div className="bank-updates-ttle"> 
-      <p>
-            Stay updated with the latest news, updates, and announcements from Vistara Capital. We provide timely information on new services, policies, and offers.
-          </p>
-          </div>
+      {/* <div className="bank-updates-ttle"> 
+      
+          </div> */}
         <div className="updates-content">
         <div className="updates-content-in">
           <h1>Bank Updates & Announcements</h1>
-         
+          <p>
+            Stay updated with the latest news, updates, and announcements from Vistara Capital. We provide timely information on new services, policies, and offers.
+          </p>
           <h3>Latest Announcements:</h3>
           <ul>
             <li>Announcement 1: Details about update.</li>

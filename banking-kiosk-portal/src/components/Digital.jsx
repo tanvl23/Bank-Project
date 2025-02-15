@@ -13,8 +13,9 @@ const DigitalBanking = () => {
   return (
     <div className="banking-container">
         <Header/>
-      <h2 className="service-title">Digital Banking</h2>
-      <div className="service-info">
+      
+      <div className="digital-info">
+      <h2 >Digital Banking</h2>
         <h3>Overview</h3>
         <p>Digital banking allows users to access banking services online via a mobile app or website.</p>
 

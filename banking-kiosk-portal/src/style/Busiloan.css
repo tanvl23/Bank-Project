@@ -1,13 +1,12 @@
-/* .hmloan-container {
-    width: 100%;
-    margin-top: 8px;
+/* .busiloan-container {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e721b;
     text-align: center;
-    background: linear-gradient(135deg, #8f94fb);
-    box-shadow: 20px 10px 20px rgba(3, 93, 18, 0.2);
-    color: rgb(2, 59, 6);
+    margin-bottom: 15px;
   } */
   
-  .loc-title {
+  /* .busiloan-title {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
@@ -15,29 +14,29 @@
     opacity: 0;
     transform: scale(0.8);
     animation: fadeInScale 1s ease-out forwards;
-  }
+  } */
   
   /* List & Paragraph Styles */
-  .loc-info {
+  .busiloan-info {
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     padding-top: 5px;
     background-image: url('../assets/bacground.png');
     background-size: cover;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .loc-info-in {
+  .busiloan-info-in {
     padding-right: 10px;
   }
   
-  .loc-info h2 {
+  .busiloan-info h1 {
     color: #1e721b;
     text-align: center;
     font-size: 35px;
     font-weight: bold;
   }
-  .loc-info h3 {
+  .busiloan-info h3 {
     color: #1e721b;
     text-align: center;
     font-size: 24px;
@@ -45,8 +44,8 @@
   }
   
   /* Animation for List Items */
-  .loc-info ol li,
-  .loc-info ul li {
+  .busiloan-info ol li,
+  .busiloan-info ul li {
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -56,15 +55,15 @@
     animation: fadeInLeft 0.5s ease-out forwards;
   }
   
-  .loc-info ol li:nth-child(1), .loc-info ul li:nth-child(1) { animation-delay: 0.3s; }
-  .loc-info ol li:nth-child(2), .loc-info ul li:nth-child(2) { animation-delay: 0.6s; }
-  .loc-info ol li:nth-child(3), .loc-info ul li:nth-child(3) { animation-delay: 0.9s; }
-  .loc-info ol li:nth-child(4), .loc-info ul li:nth-child(4) { animation-delay: 1.2s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(5) { animation-delay: 1.5s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(6) { animation-delay: 1.7s; }
+  .busiloan-info ol li:nth-child(1), .busiloan-info ul li:nth-child(1) { animation-delay: 0.3s; }
+  .busiloan-info ol li:nth-child(2), .busiloan-info ul li:nth-child(2) { animation-delay: 0.6s; }
+  .busiloan-info ol li:nth-child(3), .busiloan-info ul li:nth-child(3) { animation-delay: 0.9s; }
+  .busiloan-info ol li:nth-child(4), .busiloan-info ul li:nth-child(4) { animation-delay: 1.2s; }
+  .busiloan-info ol li:nth-child(5), .busiloan-info ul li:nth-child(5) { animation-delay: 1.5s; }
+  .busiloan-info ol li:nth-child(5), .busiloan-info ul li:nth-child(6) { animation-delay: 1.7s; }
   
   /* Animation for Paragraphs */
-  .loc-info p {
+  .busiloan-info p {
     font-size: 18px;
     color: #444;
     opacity: 0;
@@ -73,9 +72,9 @@
   }
   
   /* Delaying each paragraph */
-  .loc-info p:nth-of-type(1) { animation-delay: 0.4s; }
-  .loc-info p:nth-of-type(2) { animation-delay: 0.8s; }
-  .loc-info p:nth-of-type(3) { animation-delay: 1.2s; }
+  .busiloan-info p:nth-of-type(1) { animation-delay: 0.4s; }
+  .busiloan-info p:nth-of-type(2) { animation-delay: 0.8s; }
+  .busiloan-info p:nth-of-type(3) { animation-delay: 1.2s; }
   
   /* Letter-by-Letter Animation */
   @keyframes fadeInScale {
@@ -101,13 +100,13 @@
   }
   
   /* 3D Effect */
-  .loc-container,
-  .loc-info {
+  .busiloan-container,
+  .busiloan-info {
     perspective: 1000px;
   }
   
-  .loc-title, 
-  .loc-info h3 {
+  .busiloan-title, 
+  .busiloan-info h3 {
     transform-style: preserve-3d;
     transform: rotateX(10deg);
     animation: text3D 1s ease-in-out forwards;
@@ -123,6 +122,3 @@
         opacity: 1;
     }
   }
-  
-  
-  
