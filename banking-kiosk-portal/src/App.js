@@ -6,7 +6,7 @@ import './style/Accinfo.css'
 import './style/Loans.css'
 import './style/Bank-services.css'
 import './style/Atm.css'
-import './style/Chkbook.css'
+// import './style/Chkbook.css'
 import './style/Locker.css'
 import './style/Digital.css'
 import './style/custsupport.css'
@@ -18,7 +18,12 @@ import './style/Recurring.css'
 import './style/Fixed.css'
 import './style/Salary.css'
 import './style/Current.css'
-
+import './style/Eduloan.css'
+import './style/Homeloan.css'
+import './style/Goldloan.css'
+import './style/Perloan.css'
+import './style/Vehloan.css'
+import './style/Busiloan.css'
 
 import Login from './components/Login';
 

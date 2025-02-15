@@ -14,8 +14,9 @@ const LockerServices = () => {
     <div>
     <div className="banking-container">
         <Header/>
-      <h2 className="service-title">Locker Services</h2>
-      <div className="service-info">
+      
+      <div className="loc-info">
+      <h2 >Locker Services</h2>
         <h3>Overview</h3>
         <p>Bank lockers provide a secure place to store valuables such as jewelry, important documents, and cash.</p>
 

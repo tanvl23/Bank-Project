@@ -19,9 +19,10 @@ const AtmServices = () => {
         
     <div className="banking-container">
         <Header/>
-      <h2 className="service-title">ATM Services</h2>
+     
 
-      <div className="service-info">
+      <div className="atm-info">
+      <h2 >ATM Services</h2>
         <div> 
             <p>ATM (Automated Teller Machine) services allow customers to withdraw cash, check account balances, deposit money, and more without visiting a bank branch.</p>
     

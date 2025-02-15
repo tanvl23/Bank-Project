@@ -1,23 +1,128 @@
-.banking-container{
-
-}
-
-.service-title{
-
-}
-
-.service-info{
-
-}
-
-.service-info p {
-
-}
-
-.service-info h3{
-
-}
-
-.service-info li{
-
-}
+/* .hmloan-container {
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    background: linear-gradient(135deg, #8f94fb);
+    box-shadow: 20px 10px 20px rgba(3, 93, 18, 0.2);
+    color: rgb(2, 59, 6);
+  } */
+  
+  .atm-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 1s ease-out forwards;
+  }
+  
+  /* List & Paragraph Styles */
+  .atm-info {
+    width: 100%;
+    padding: 20px;
+    padding-top: 5px;
+    background-image: url('../assets/bacground.png');
+    background-size: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hmloan-info-in {
+    padding-right: 10px;
+  }
+  
+  .atm-info h2 {
+    color: #1e721b;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  .atm-info h3 {
+    color: #1e721b;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Animation for List Items */
+  .atm-info ol li,
+  .atm-info ul li {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.5s ease-out forwards;
+  }
+  
+  .atm-info ol li:nth-child(1), .atm-info ul li:nth-child(1) { animation-delay: 0.3s; }
+  .atm-info ol li:nth-child(2), .atm-info ul li:nth-child(2) { animation-delay: 0.6s; }
+  .atm-info ol li:nth-child(3), .atm-info ul li:nth-child(3) { animation-delay: 0.9s; }
+  .atm-info ol li:nth-child(4), .atm-info ul li:nth-child(4) { animation-delay: 1.2s; }
+  .atm-info ol li:nth-child(5), .atm-info ul li:nth-child(5) { animation-delay: 1.5s; }
+  .atm-info ol li:nth-child(5), .atm-info ul li:nth-child(6) { animation-delay: 1.7s; }
+  
+  /* Animation for Paragraphs */
+  .atm-info p {
+    font-size: 18px;
+    color: #444;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+  
+  /* Delaying each paragraph */
+  .atm-info p:nth-of-type(1) { animation-delay: 0.4s; }
+  .atm-info p:nth-of-type(2) { animation-delay: 0.8s; }
+  .atm-info p:nth-of-type(3) { animation-delay: 1.2s; }
+  
+  /* Letter-by-Letter Animation */
+  @keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+  }
+  
+  /* 3D Effect */
+  .hmloan-container,
+  .hmloan-info {
+    perspective: 1000px;
+  }
+  
+  .hmloan-title, 
+  .hmloan-info h3 {
+    transform-style: preserve-3d;
+    transform: rotateX(10deg);
+    animation: text3D 1s ease-in-out forwards;
+  }
+  
+  @keyframes text3D {
+    0% {
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+  }
+  
+  
+  

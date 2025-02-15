@@ -16,19 +16,21 @@ const LocateUs = () => {
   return (
     <div>
         <Header />
-    <div className="locate-us-page">
+    {/* <div className="locate-us-page">
       
-        <h1>Locate Us</h1>
-        <p>Find our various branch locations, emergency contacts, and follow us on social media for updates.</p>
-        </div>
+        
+        </div> */}
         <div className="locate-content">
         <div className="locate-content-in">
+        <h1>Locate Us</h1>
+        <p>Find our various branch locations, emergency contacts, and follow us on social media for updates.</p>
         <h3>Branch Locations:</h3>
+        <p>
         <ul>
           <li>Branch A: 123 Main St, City, Phone: (123) 456-7890</li>
           <li>Branch B: 456 Side St, City, Phone: (234) 567-8901</li>
           <li>Branch C: 789 High St, City, Phone: (345) 678-9012</li>
-        </ul>
+        </ul></p>
         <h3>Emergency Contacts:</h3>
         <p>For urgent inquiries, call our 24/7 hotline: +1 234 567 890</p>
         <h3>Follow Us:</h3>

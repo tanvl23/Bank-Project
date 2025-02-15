@@ -7,7 +7,7 @@
     color: rgb(2, 59, 6);
   } */
   
-  .loc-title {
+  .hmloan-title {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
   }
   
   /* List & Paragraph Styles */
-  .loc-info {
+  .hmloan-info {
     width: 100%;
     padding: 20px;
     padding-top: 5px;
@@ -27,17 +27,17 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   }
   
-  .loc-info-in {
+  .hmloan-info-in {
     padding-right: 10px;
   }
   
-  .loc-info h2 {
+  .hmloan-info h2 {
     color: #1e721b;
     text-align: center;
     font-size: 35px;
     font-weight: bold;
   }
-  .loc-info h3 {
+  .hmloan-info h3 {
     color: #1e721b;
     text-align: center;
     font-size: 24px;
@@ -45,8 +45,8 @@
   }
   
   /* Animation for List Items */
-  .loc-info ol li,
-  .loc-info ul li {
+  .hmloan-info ol li,
+  .hmloan-info ul li {
     font-weight: bold;
     font-size: 18px;
     color: #333;
@@ -56,15 +56,15 @@
     animation: fadeInLeft 0.5s ease-out forwards;
   }
   
-  .loc-info ol li:nth-child(1), .loc-info ul li:nth-child(1) { animation-delay: 0.3s; }
-  .loc-info ol li:nth-child(2), .loc-info ul li:nth-child(2) { animation-delay: 0.6s; }
-  .loc-info ol li:nth-child(3), .loc-info ul li:nth-child(3) { animation-delay: 0.9s; }
-  .loc-info ol li:nth-child(4), .loc-info ul li:nth-child(4) { animation-delay: 1.2s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(5) { animation-delay: 1.5s; }
-  .loc-info ol li:nth-child(5), .loc-info ul li:nth-child(6) { animation-delay: 1.7s; }
+  .hmloan-info ol li:nth-child(1), .hmloan-info ul li:nth-child(1) { animation-delay: 0.3s; }
+  .hmloan-info ol li:nth-child(2), .hmloan-info ul li:nth-child(2) { animation-delay: 0.6s; }
+  .hmloan-info ol li:nth-child(3), .hmloan-info ul li:nth-child(3) { animation-delay: 0.9s; }
+  .hmloan-info ol li:nth-child(4), .hmloan-info ul li:nth-child(4) { animation-delay: 1.2s; }
+  .hmloan-info ol li:nth-child(5), .hmloan-info ul li:nth-child(5) { animation-delay: 1.5s; }
+  .hmloan-info ol li:nth-child(5), .hmloan-info ul li:nth-child(6) { animation-delay: 1.7s; }
   
   /* Animation for Paragraphs */
-  .loc-info p {
+  .hmloan-info p {
     font-size: 18px;
     color: #444;
     opacity: 0;
@@ -73,9 +73,9 @@
   }
   
   /* Delaying each paragraph */
-  .loc-info p:nth-of-type(1) { animation-delay: 0.4s; }
-  .loc-info p:nth-of-type(2) { animation-delay: 0.8s; }
-  .loc-info p:nth-of-type(3) { animation-delay: 1.2s; }
+  .hmloan-info p:nth-of-type(1) { animation-delay: 0.4s; }
+  .hmloan-info p:nth-of-type(2) { animation-delay: 0.8s; }
+  .hmloan-info p:nth-of-type(3) { animation-delay: 1.2s; }
   
   /* Letter-by-Letter Animation */
   @keyframes fadeInScale {
@@ -101,13 +101,13 @@
   }
   
   /* 3D Effect */
-  .loc-container,
-  .loc-info {
+  .hmloan-container,
+  .hmloan-info {
     perspective: 1000px;
   }
   
-  .loc-title, 
-  .loc-info h3 {
+  .hmloan-title, 
+  .hmloan-info h3 {
     transform-style: preserve-3d;
     transform: rotateX(10deg);
     animation: text3D 1s ease-in-out forwards;

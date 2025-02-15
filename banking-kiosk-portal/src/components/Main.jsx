@@ -8,7 +8,7 @@ const Accinfo = lazy(() => import("./Accinfo"))
 const Banks = lazy(() => import("./Bank-services"))
 const Loans = lazy(() => import("./Loans"))
 const At = lazy(() => import("./Atmser"))
-const Chkbook = lazy(() => import("./Chkbook"))
+// const Chkbook = lazy(() => import("./Chkbook"))
 const Bill = lazy(() => import("./Bill"))
 const Locker = lazy(() => import("./Locker"))
 const Digi = lazy(() => import("./Digital"))
@@ -21,9 +21,12 @@ const Recurr = lazy(() => import("./Recurring"))
 const Fix = lazy(() => import("./Fixed"))
 const Sal = lazy(() => import("./Salary"))
 const Curr = lazy(() => import("./Current"))
-
-
-
+const Eduloan = lazy(() => import("./Eduloan"))
+const Homel = lazy(() => import("./Homeloan"))
+const Gold = lazy(() => import("./Goldloan"))
+const Personal = lazy(() => import("./Perloan"))
+const Vehicle = lazy(() => import("./Vehloan"))
+const Business = lazy(() => import("./Busiloan"))
 
 export default function Main(props) {
     return (
@@ -54,10 +57,10 @@ export default function Main(props) {
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><At /></Suspense>}></Route>} 
 
-                    {<Route exact path="/chkbook" element={<Suspense fallback={
+                    {/* {<Route exact path="/chkbook" element={<Suspense fallback={
                     <div className="spinner=box">
                         <Spinner animation="border" className="spinner"></Spinner>
-                    </div>}><Chkbook /></Suspense>}></Route>} 
+                    </div>}><Chkbook /></Suspense>}></Route>}  */}
 
                     {<Route exact path="/bill" element={<Suspense fallback={
                     <div className="spinner=box">
@@ -121,7 +124,37 @@ export default function Main(props) {
                     </div>}><Curr /></Suspense>}></Route>} 
 
 
-                   
+                    {<Route exact path="/eduloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Eduloan /></Suspense>}></Route>} 
+
+                    {<Route exact path="/homeloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Homel /></Suspense>}></Route>} 
+
+                    {<Route exact path="/goldloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Gold /></Suspense>}></Route>} 
+
+                    {<Route exact path="/perloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Personal /></Suspense>}></Route>} 
+
+                    {<Route exact path="/vehloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Vehicle /></Suspense>}></Route>} 
+
+                    {<Route exact path="/busiloan" element={<Suspense fallback={
+                    <div className="spinner=box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Business /></Suspense>}></Route>} 
+
+
 
 
 

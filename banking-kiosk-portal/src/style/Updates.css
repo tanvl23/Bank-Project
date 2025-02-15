@@ -27,7 +27,7 @@
     /* margin: 30px ; */
     /* margin-right: 30px; */
     padding: 20px;
-    padding-top: 0px;
+    padding-top: 5px;
     background-image: url('../assets/bacground.png');
     background-size: cover;
     /* border-radius: 15px; */
@@ -36,7 +36,20 @@
 .updates-content-in{
     padding-right: 10px;
 }
-
+.updates-content h1{
+    color: #1e721b;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    /* margin-bottom: 15px; */
+}
+.updates-content p{
+    color: #1e721b;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    /* margin-bottom: 15px; */
+}
 .updates-content h3 {
     color: #1e721b;
     text-align: center;
