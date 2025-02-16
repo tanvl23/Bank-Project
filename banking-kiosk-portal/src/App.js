@@ -24,6 +24,7 @@ import './style/Goldloan.css'
 import './style/Perloan.css'
 import './style/Vehloan.css'
 import './style/Busiloan.css'
+import './style/ChatPopup.css'
 
 import Login from './components/Login';
 
