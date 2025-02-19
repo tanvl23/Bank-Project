@@ -1,59 +1,68 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/custsupport.css";
-//import bankLogo from "../assets/bank-logo.png";
-//import searchIcon from "../assets/search-icon.png";
-//import homeIcon from "../assets/home-icon.png";
-//import chatbotIcon from "../assets/chatbot-icon.png";
-// import backIcon from "../assets/back-icon.png";
 import Header from './Header';
 import Footer from './Footer';
 import "../style/Header.css"
 import "../style/Footer.css"
 import { Link } from "react-router-dom";
 
+import locate from "../assets/locate.png";
+import rules from "../assets/rules.png";
+import updates from "../assets/updates.png";
+
+const cust = [
+  { path: "/loacteus", img: locate, label: "Locate Us" },
+  { path: "/rules", img: rules, label: "Rules and Regulations" },
+  { path: "/updates", img: updates, label: "Updates" },
+  // { path: "/atm", img: atm , label: "ATM Services" },
+  // { path: "/locker", img: locker, label: "Locker Services" },
+  // { path: "/digital", img: digi, label: "Digital Services" },
+  // { path: "/insurance", img: insur, label: "Insurance Services" },
+];
+
 const CustomerSupport = () => {
-    const navigate = useNavigate();
-  
-    return (
-      <div>
-        <Header />
-        
-          {/* Banking Services Grid */}
-          <div className="cust-container">
-  
-          <div className="cust-item" onClick={() => {
-              navigate('/locateus')
-            }}>
-              <Link to="/locateus" className="custinfo-container">
-                {/* <img src={taxIcon} alt="Tax Services" /> */}
-                <p>Locate Us</p>
+  const navigate = useNavigate();
+  const [visibleIndexes, setVisibleIndexes] = useState([0, 1]); // Show first two tabs initially
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleIndexes(([first, second]) => {
+        let nextFirst = (first + 2) % cust.length;
+        let nextSecond = (second + 2) % cust.length;
+        return [nextFirst, nextSecond];
+      });
+    }, 3000); // Change tabs every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="homepage-cust">
+      <Header />
+
+      {/* Main Content */}
+      <main className="content-cust">
+        <div className="cust">
+          {cust.map((tab, index) => (
+            <div
+              key={index}
+              className={`cust-item ${visibleIndexes.includes(index) ? "active" : "hidden"}`}
+              onClick={() => navigate(tab.path)}
+            >
+              <Link to={tab.path} className="cust-icon-container">
+                <img src={tab.img} alt={tab.label} />
+                <p>{tab.label}</p>
               </Link>
             </div>
-            
-            <div className="cust-item" onClick={() => {
-              navigate('/rules')
-            }}>
-              <Link to="/rules" className="custinfo-container">
-                {/* <img src={} alt="Checkbook Services" /> */}
-                <p>Rules and Regulations</p>
-              </Link>
-            </div>
-  
-            
-            <div className="cust-item" onClick={() => navigate("/updates")}>
-            <Link to="/updates" className="custinfo-container">
-              {/* <img src={billIcon} alt="Bill Utility Services" /> */}
-              <p>Latest Bank Updates</p>
-              </Link>
-            </div>
-  
-          </div>
-  
-        
-        <Footer />
-      </div>
-    );
-  };
-  
+          ))}
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
   export default CustomerSupport;

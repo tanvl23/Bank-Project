@@ -1,49 +1,64 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom'
-// import "./Accinfo.css"; // Import CSS file
-// Import Image Icons (Replace with actual image paths)
-import bankIcon from "../assets/bank.png"; // Vistara Capital icon
-import savingIcon from "../assets/saving.png";
-import salaryIcon from "../assets/salary.png";
-import recurringIcon from "../assets/recurring.png";
-import fixedIcon from "../assets/fixed.png";
-import currentIcon from "../assets/current.png";
-// import searchIcon from "../assets/search.png";
-// import chatbotIcon from "../assets/chatbot.png";
+import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import "../style/Accinfo.css";
+import "../style/Header.css"
+import "../style/Footer.css"
+// Import Account Icons
+import saving from "../assets/saving.png";
+import sal from "../assets/salary.png";
+import recur from "../assets/recurring.png";
+import fixed from "../assets/fixed.png";
+import cur from "../assets/current.png";
 
+const accounts = [
+  { path: "/savingAcc", img: saving, label: "Saving Account" },
+  { path: "/recurring", img: recur, label: "Recurring Account" },
+  { path: "/fixed", img: fixed, label: "Fixed Account" },
+  { path: "/salary", img: sal, label: "Salary Account" },
+  { path: "/current", img: cur, label: "Current Account" },
+];
 
 const AccountInfo = () => {
+  const navigate = useNavigate();
+  const [visibleIndexes, setVisibleIndexes] = useState([0, 1]); // Show first two tabs initially
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleIndexes(([first, second]) => {
+        let nextFirst = (first + 2) % accounts.length;
+        let nextSecond = (second + 2) % accounts.length;
+        return [nextFirst, nextSecond];
+      });
+    }, 3000); // Change tabs every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div>
+    <div className="homepage-acc">
       <Header />
 
-      {/* Account Icons */}
-      <div className="account-icons">
-        <Link to="/savingAcc" className="acc-container">
-          <img src={savingIcon} alt="Saving Account" />
-          <p>Saving Account</p>
-        </Link>
-        <Link to="/recurring" className="acc-container">
-          <img src={recurringIcon} alt="Recurring Account" />
-          <p>Recurring Account</p>
-        </Link>
-        <Link to="/fixed" className="acc-container">
-          <img src={fixedIcon} alt="Fixed Account" />
-          <p>Fixed Account</p>
-        </Link>
-        <Link to="/salary" className="acc-container">
-          <img src={salaryIcon} alt="Salary Account" />
-          <p>Salary Account</p>
-        </Link>
-        <Link to="/current" className="acc-container">
-          <img src={currentIcon} alt="Current Account" />
-          <p>Current Account</p>
-        </Link>
-      </div>
+      {/* Main Content */}
+      <main className="content-acc">
+        <div className="acc">
+          {accounts.map((tab, index) => (
+            <div
+              key={index}
+              className={`acc-item ${visibleIndexes.includes(index) ? "active" : "hidden"}`}
+              onClick={() => navigate(tab.path)}
+            >
+              <Link to={tab.path} className="acc-icon-container">
+                <img src={tab.img} alt={tab.label} />
+                <p>{tab.label}</p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </main>
+
       <Footer />
     </div>
   );

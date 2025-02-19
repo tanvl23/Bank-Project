@@ -12,7 +12,7 @@ import "../style/Header.css"
 import "../style/Footer.css"
 import { Link } from "react-router-dom";
 
-const SalaryAccount = () => {
+const FixedAccount = () => {
     const navigate = useNavigate();
     
         return (
