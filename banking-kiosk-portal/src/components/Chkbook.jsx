@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../style/Digital.css';
+import '../style/Chkbook.css';
 import Header from './Header';
 import Footer from './Footer';
 import "../style/Header.css";
 import "../style/Footer.css";
 import TextToSpeech from "../TextToSpeech"; 
 
-const Digital = () => {
+const Checkbook = () => {
   const navigate = useNavigate();
   const [textToRead, setTextToRead] = useState("");
   const [showPopup, setShowPopup] = useState(false); // State for pop-up
@@ -21,17 +21,23 @@ const Digital = () => {
   };
 
   return (
-    <div className="digital-container">
+    <div className="Checkcontainer">
       <Header />
-      <h2 className="page-title">Digital Services</h2>
-      <div className="digital-info-container">
-        <div className="digital-box">
-          <h3>Eligibility & Process to Avail Digital Banking:</h3>
+      <h2 className="page-title">Checkbook Services</h2>
+      <div className="Check-info-container">
+        <div className="Check-box">
+          <h3>Eligibility & Process to Avail Checkbook Services:</h3>
           <ul>
-          <li>Customers must have a savings or current account with the bank.</li>
-          <li>Register for net banking or mobile banking services.</li>
-	       <li>Secure login using user ID, password, and OTP authentication.</li>
-         <li>Some services require linking the mobile number to the bank account.</li>
+          <li>Customers must have a savings or current account or a current business account with the bank.</li>
+          <li>	Submit a request through any of the following methods:
+          <ul>
+          <li>Branch Visit: Fill out a checkbook request form.</li>
+          <li>Net/Mobile Banking: Order online via the bank’s app or website.</li>
+          <li>ATM: Some banks allow checkbook requests through ATMs.</li>
+          <li>SMS or Customer Care: Request via registered mobile number or phone banking.</li>
+           </ul></li>
+	       <li>The checkbook is delivered to the registered address within a few days.</li>
+         
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -42,13 +48,13 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
+        <div className="Check-box">
           <h3>Charges & Fees:</h3>
           <ul>
-          <li>Free for Basic Services: Balance inquiry, fund transfers, and online shopping are usually free.</li>
-          <li>Transaction Charges: Some fund transfers (RTGS, NEFT) may have small charges.</li>
-          <li>Cardless Cash Withdrawal Fee: Certain banks charge a fee for cash withdrawal via mobile banking.</li>
-          <li>Premium Services: Advanced digital services like priority banking apps may have subscription fees.</li>
+          <li>Free Checkbooks: Most banks offer a limited number of free checkbooks per year (e.g., first 1-2 checkbooks free).</li>
+          <li>Additional Checkbook Charges: After free limits, banks charge a fee per checkbook (e.g., ₹100-₹200 for 20-50 leaves).</li>
+          <li>Stop Payment Charges: A small fee is charged for stopping a payment on a lost/stolen check.</li>
+          <li>Check Bounce Penalty: If a check is dishonored due to insufficient funds, banks impose a penalty.</li>
 
             </ul>
          
@@ -61,16 +67,15 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
-          <h3>Types of Digital Banking Services:</h3>
+        <div className="Check-box">
+          <h3>Types of Checkbook Services:</h3>
           <ul>
-          <li>•	Internet Banking: Access full banking services through a web browser.</li>
-          <li>	Mobile Banking Apps: Perform transactions and manage accounts via a smartphone app.</li>
-	       <li>UPI (Unified Payments Interface): Instant fund transfer using mobile numbers or UPI IDs.</li>
-         <li>E-Wallets: Digital wallets for online payments, shopping, and P2P transfers.</li>
-         <li>Chatbots & AI Banking: Virtual assistants to help with banking queries.</li>
-         <li>USSD Banking: Offline mobile banking for basic transactions via USSD codes (*99# for UPI).</li>
-         <li>QR Code Payments: Scan and pay using mobile banking or UPI apps.</li>
+          <li>Personal Checkbooks: Issued to individual account holders for personal transactions.</li>
+          <li>Business/Corporate Checkbooks: Offered to companies and firms for business payments.</li>
+	       <li>Multi-City Checks: Can be encashed at any branch of the bank, regardless of the issuing city.</li>
+         <li>	CTS-2010 Compliant Checks: Modern, high-security checks as per RBI/NPCI guidelines for electronic clearing.</li>
+         
+
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -128,4 +133,4 @@ const Digital = () => {
   );
  };  
 
-export default Digital;  
+export default Checkbook;  

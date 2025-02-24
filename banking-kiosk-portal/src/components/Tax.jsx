@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../style/Digital.css';
+import '../style/Tax.css';
 import Header from './Header';
 import Footer from './Footer';
 import "../style/Header.css";
 import "../style/Footer.css";
 import TextToSpeech from "../TextToSpeech"; 
 
-const Digital = () => {
+const Tax = () => {
   const navigate = useNavigate();
   const [textToRead, setTextToRead] = useState("");
   const [showPopup, setShowPopup] = useState(false); // State for pop-up
@@ -21,17 +21,17 @@ const Digital = () => {
   };
 
   return (
-    <div className="digital-container">
+    <div className="tax-container">
       <Header />
-      <h2 className="page-title">Digital Services</h2>
-      <div className="digital-info-container">
-        <div className="digital-box">
-          <h3>Eligibility & Process to Avail Digital Banking:</h3>
+      <h2 className="page-title">Tax Services</h2>
+      <div className="tax-info-container">
+        <div className="tax-box">
+          <h3>Eligibility & Process to Use Tax Services:</h3>
           <ul>
-          <li>Customers must have a savings or current account with the bank.</li>
-          <li>Register for net banking or mobile banking services.</li>
-	       <li>Secure login using user ID, password, and OTP authentication.</li>
-         <li>Some services require linking the mobile number to the bank account.</li>
+          <li>•	Must have a savings or current account with the bank.</li>
+          <li>Register for net banking or mobile banking for online tax payments</li>
+	       <li>Select the relevant tax category and provide details such as PAN, TAN, or GSTIN.</li>
+         <li>Complete payment using debit card, net banking, or other available modes.</li>
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -42,14 +42,12 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
+        <div className="tax-box">
           <h3>Charges & Fees:</h3>
           <ul>
-          <li>Free for Basic Services: Balance inquiry, fund transfers, and online shopping are usually free.</li>
-          <li>Transaction Charges: Some fund transfers (RTGS, NEFT) may have small charges.</li>
-          <li>Cardless Cash Withdrawal Fee: Certain banks charge a fee for cash withdrawal via mobile banking.</li>
-          <li>Premium Services: Advanced digital services like priority banking apps may have subscription fees.</li>
-
+          <li>Basic Tax Payments: Usually free for account holders.</li>
+          <li>ITR Filing Services: Some banks charge fees for assisted tax filing.</li>
+          <li>Penalty Charges: Late tax payments may attract penalties and interest as per government rules.</li>
             </ul>
          
           <div className="button-group">
@@ -61,16 +59,16 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
-          <h3>Types of Digital Banking Services:</h3>
+        <div className="tax-box">
+          <h3>Types of Taxes That Can Be Paid via Banks:</h3>
           <ul>
-          <li>•	Internet Banking: Access full banking services through a web browser.</li>
-          <li>	Mobile Banking Apps: Perform transactions and manage accounts via a smartphone app.</li>
-	       <li>UPI (Unified Payments Interface): Instant fund transfer using mobile numbers or UPI IDs.</li>
-         <li>E-Wallets: Digital wallets for online payments, shopping, and P2P transfers.</li>
-         <li>Chatbots & AI Banking: Virtual assistants to help with banking queries.</li>
-         <li>USSD Banking: Offline mobile banking for basic transactions via USSD codes (*99# for UPI).</li>
-         <li>QR Code Payments: Scan and pay using mobile banking or UPI apps.</li>
+          <li>Income Tax: Payable by individuals and businesses on earnings.</li>
+          <li>Goods & Services Tax (GST): Indirect tax on goods and services.</li>
+	       <li>TDS (Tax Deducted at Source): Deducted by employers or financial institutions on salaries and interest income.</li>
+         <li>	Property Tax: Paid to local municipal authorities.</li>
+         <li>	Professional Tax: Applicable to professionals and salaried employees.</li>
+         <li>	Customs & Excise Duty: Taxes on imports, exports, and manufacturing of goods.</li>
+
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -128,4 +126,4 @@ const Digital = () => {
   );
  };  
 
-export default Digital;  
+export default Tax;  

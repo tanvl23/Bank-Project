@@ -70,12 +70,24 @@
 .rules-content ol li:nth-child(3) { animation-delay: 0.9s; }
 .rules-content ol li:nth-child(4) { animation-delay: 1.2s; }
 .rules-content ol li:nth-child(5) { animation-delay: 1.5s; }
+.rules-content ol li:nth-child(6) { animation-delay: 2.0s; }
+.rules-content ol li:nth-child(7) { animation-delay: 2.5s; }
+.rules-content ol li:nth-child(8) { animation-delay: 2.8s; }
+.rules-content ol li:nth-child(9) { animation-delay: 3.0s; }
+.rules-content ol li:nth-child(10) { animation-delay: 3.5s; }
+.rules-content ol li:nth-child(11) { animation-delay: 3.8s; }
 
 .rules-content ul li:nth-child(1) { animation-delay: 1.8s; }
 .rules-content ul li:nth-child(2) { animation-delay: 2.1s; }
 .rules-content ul li:nth-child(3) { animation-delay: 2.4s; }
 .rules-content ul li:nth-child(4) { animation-delay: 2.7s; }
 .rules-content ul li:nth-child(5) { animation-delay: 3s; }
+.rules-content ol li:nth-child(6) { animation-delay: 3.2s; }
+.rules-content ol li:nth-child(7) { animation-delay: 3.5s; }
+.rules-content ol li:nth-child(8) { animation-delay: 3.8s; }
+.rules-content ol li:nth-child(9) { animation-delay: 4.0s; }
+.rules-content ol li:nth-child(10) { animation-delay: 4ms; }
+.rules-content ol li:nth-child(11) { animation-delay: 4.8s; }
 
 /* Letter-by-Letter Animation */
 @keyframes fadeInScale {

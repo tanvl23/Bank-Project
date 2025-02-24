@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../style/Digital.css';
+import '../style/Insurance.css';
 import Header from './Header';
 import Footer from './Footer';
 import "../style/Header.css";
 import "../style/Footer.css";
 import TextToSpeech from "../TextToSpeech"; 
 
-const Digital = () => {
+const Insurance  = () => {
   const navigate = useNavigate();
   const [textToRead, setTextToRead] = useState("");
   const [showPopup, setShowPopup] = useState(false); // State for pop-up
@@ -21,17 +21,18 @@ const Digital = () => {
   };
 
   return (
-    <div className="digital-container">
+    <div className="insur-container">
       <Header />
-      <h2 className="page-title">Digital Services</h2>
-      <div className="digital-info-container">
-        <div className="digital-box">
-          <h3>Eligibility & Process to Avail Digital Banking:</h3>
+      <h2 className="page-title">Insurance Services</h2>
+      <div className="insur-info-container">
+        <div className="insur-box">
+          <h3>Eligibility & Process to Avail Insurance Services:</h3>
           <ul>
-          <li>Customers must have a savings or current account with the bank.</li>
-          <li>Register for net banking or mobile banking services.</li>
-	       <li>Secure login using user ID, password, and OTP authentication.</li>
-         <li>Some services require linking the mobile number to the bank account.</li>
+          <li>Customers must have a savings or current account with the bank (optional in some cases).</li>
+          <li>Choose an insurance policy based on requirements (life, health, motor, etc.).</li>
+	       <li>Submit KYC documents (ID proof, address proof, and income proof for some policies).</li>
+         <li>Pay the premium online or through auto-debit from the bank account.</li>
+         <li>Policy documents are issued digitally or in physical form.</li>
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -42,14 +43,13 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
+        <div className="insur-box">
           <h3>Charges & Fees:</h3>
           <ul>
-          <li>Free for Basic Services: Balance inquiry, fund transfers, and online shopping are usually free.</li>
-          <li>Transaction Charges: Some fund transfers (RTGS, NEFT) may have small charges.</li>
-          <li>Cardless Cash Withdrawal Fee: Certain banks charge a fee for cash withdrawal via mobile banking.</li>
-          <li>Premium Services: Advanced digital services like priority banking apps may have subscription fees.</li>
-
+          <li>Premium Amount: Varies based on the type of insurance and coverage.</li>
+          <li>Processing Fees: Some banks charge a small fee for policy processing.</li>
+          <li>Late Payment Penalty: If premiums are not paid on time, penalties may be applicable.</li>
+          <li>•	Claim Settlement Charges: Some claims may involve processing charges.</li>
             </ul>
          
           <div className="button-group">
@@ -61,16 +61,17 @@ const Digital = () => {
             </button>
           </div>
         </div>
-        <div className="digital-box">
-          <h3>Types of Digital Banking Services:</h3>
+        <div className="insur-box">
+          <h3>Types of Insurance Offered by Bank:</h3>
           <ul>
-          <li>•	Internet Banking: Access full banking services through a web browser.</li>
-          <li>	Mobile Banking Apps: Perform transactions and manage accounts via a smartphone app.</li>
-	       <li>UPI (Unified Payments Interface): Instant fund transfer using mobile numbers or UPI IDs.</li>
-         <li>E-Wallets: Digital wallets for online payments, shopping, and P2P transfers.</li>
-         <li>Chatbots & AI Banking: Virtual assistants to help with banking queries.</li>
-         <li>USSD Banking: Offline mobile banking for basic transactions via USSD codes (*99# for UPI).</li>
-         <li>QR Code Payments: Scan and pay using mobile banking or UPI apps.</li>
+          <li>Life Insurance: Financial protection for the policyholder’s family in case of death.</li>
+          <li>	Health Insurance: Covers medical expenses, hospitalization costs, and critical illnesses.</li>
+	       <li>Motor Insurance: Covers damages to vehicles and third-party liabilities.</li>
+         <li>Travel Insurance: Covers medical emergencies, trip cancellations, and lost baggage while traveling</li>
+         <li>Home Insurance: Protects homes against natural disasters, theft, and fire damage.</li>
+         <li>Personal Accident Insurance: Offers financial support in case of accidental death or disability.</li>
+         <li>Loan Insurance: Covers outstanding loan amounts in case of the borrower’s death or disability.</li>
+         
           </ul>
           <div className="button-group">
             <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
@@ -128,4 +129,4 @@ const Digital = () => {
   );
  };  
 
-export default Digital;  
+export default Insurance ;  
