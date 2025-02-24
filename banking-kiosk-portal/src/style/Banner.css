@@ -1,0 +1,57 @@
+/* Make the container take full viewport height */
+.banner-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  /* Ensure the carousel itself takes full height */
+  .full-screen-carousel {
+    width: 100vw;
+    height: 90vh;
+  }
+  
+  /* Make images fill the entire screen properly */
+  .banner-image {
+    width: 100vw;
+    height: 90vh;
+    object-fit: cover; /* Ensures image fills screen without distortion */
+  }
+  
+  /* Caption styling */
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Button container to keep it centered */
+  .button-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  /* Style for the button */
+  .home-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-btn:hover {
+    background-color: #0056b3;
+  }
+  

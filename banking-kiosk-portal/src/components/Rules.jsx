@@ -25,11 +25,25 @@ const RulesAndRegulations = () => {
           <p>
             Here you will find all the rules and regulations governing our banking services. Please read them carefully to understand your rights and responsibilities.
           </p>
+          
           <h3>General Guidelines:</h3>
           <ul>
             <li>All customers must abide by the bank's policies.</li>
             <li>Usage of services must comply with legal requirements.</li>
             <li>Any violation may lead to service restrictions or account suspension.</li>
+            <li>Customers must provide accurate information and update records as needed.</li>
+
+            <li>The bank reserves the right to modify its policies at any time.</li>
+
+            <li>Customers must keep their banking credentials confidential.</li>
+
+            <li>Transactions may be subject to verification for security purposes.</li>
+            <li>Unauthorized access or fraudulent activity will result in legal action.</li>
+
+            <li>The bank is not responsible for losses due to customer negligence.</li>
+
+            <li>Complaints and disputes should be reported through official channels.</li>
+
             <li>For further details, refer to our complete terms and conditions document.</li>
           </ul>
         </div>

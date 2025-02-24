@@ -24,7 +24,7 @@ const banks = [
   { path: "/tax", img: tax, label: "Tax Services" },
   { path: "/chkbook", img: chk, label: "checkBook Services" },
   { path: "/bill", img: bill, label: "Bill Services" },
-  { path: "/atm", img: atm , label: "ATM Services" },
+  { path: "/atmser", img: atm , label: "ATM Services" },
   { path: "/locker", img: locker, label: "Locker Services" },
   { path: "/digital", img: digi, label: "Digital Services" },
   { path: "/insurance", img: insur, label: "Insurance Services" },
