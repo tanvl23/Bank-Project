@@ -1,53 +1,128 @@
-import React from "react";
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import '../style/Atm.css'
-// import bankLogo from "../assets/bank-logo.png";
-// import searchIcon from "../assets/search-icon.png";
-// import homeIcon from "../assets/home-icon.png";
-// import chatbotIcon from "../assets/chatbot-icon.png";
-import "../style/Header.css"
-import "../style/Footer.css"
- import Header from "./Header";
-  import Footer from "./Footer";
+import '../style/Atm.css';
+import Header from './Header';
+import Footer from './Footer';
+import "../style/Header.css";
+import "../style/Footer.css";
+import TextToSpeech from "../TextToSpeech"; 
 
-
-
-const AtmServices = () => {
+const ATM = () => {
   const navigate = useNavigate();
+  const [textToRead, setTextToRead] = useState("");
+  const [showPopup, setShowPopup] = useState(false); // State for pop-up
+
+  const handleReadAloud = (text) => {
+    setTextToRead(text);
+  };
+
+  const handleStop = () => {
+    setTextToRead(""); // This will trigger stop in TextToSpeech component
+  };
 
   return (
-        
-    <div className="banking-container">
-        <Header/>
-     
-
-      <div className="atm-info">
-      <h2 >ATM Services</h2>
-        <div> 
-            <p>ATM (Automated Teller Machine) services allow customers to withdraw cash, check account balances, deposit money, and more without visiting a bank branch.</p>
-    
-            <h3>How to Use ATM Services</h3>
-            <ol>
-              <li>Insert your debit or credit card into the ATM.</li>
-              <li>Enter your PIN securely.</li>
-              <li>Select the desired service (withdrawal, deposit, balance inquiry, etc.).</li>
-              <li>Follow on-screen instructions to complete your transaction.</li>
-              <li>Take your card and transaction receipt after completion.</li>
-            </ol>
-    
-            <h3>Additional ATM Services</h3>
-            <ul>
-              <li>Cash withdrawal and deposits</li>
-              <li>Mini statement and balance inquiry</li>
-              <li>PIN change</li>
-              <li>Fund transfers between accounts</li>
-              <li>Mobile number registration for SMS alerts</li>
+    <div className="atm-container">
+      <Header />
+      <h2 className="page-title">Atm Services</h2>
+      <div className="atm-info-container">
+        <div className="atm-box">
+          <h3>Eligibility & Process to Use ATM Services:</h3>
+          <ul>
+          <li>Customers must have a debit card, ATM card, or credit card issued by their bank.</li>
+          <li>The card must be activated and linked to a valid bank account.</li>
+	       <li>Transactions require a 4-digit or 6-digit PIN for security.</li>
+         <li>	ATMs may have daily transaction limits set by the bank.</li>
+          </ul>
+          <div className="button-group">
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+              🔊 Read Aloud
+            </button>
+            <button className="stop-btn" onClick={handleStop}>
+              ⏹ Stop
+            </button>
+          </div>
+        </div>
+        <div className="atm-box">
+          <h3>Charges & Fees:</h3>
+          <ul>
+          <li>Free Transactions: Most banks offer a limited number of free ATM transactions per month (e.g., 3-5 free withdrawals at other bank ATMs).</li>
+          <li>Extra Transaction Charges: A small fee is charged for exceeding free monthly limits.</li>
+          <li>Interbank ATM Charges: Using another bank’s ATM may incur a transaction fee after the free limit.</li>
+          <li>International ATM Fees: Foreign ATM withdrawals have higher charges, along with currency conversion fees.</li>
+          <li>Card Replacement Fee: If the ATM card is lost or stolen, banks charge a fee for reissuing a new one.</li>
             </ul>
-     </div>
+        
+          <div className="button-group">
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+              🔊 Read Aloud
+            </button>
+            <button className="stop-btn" onClick={handleStop}>
+              ⏹ Stop
+            </button>
+          </div>
+        </div>
+        {/* <div className="atm-box">
+          <h3>Terms & Conditions:</h3>
+          <ul>
+          <li>Banks have the right to break open the locker if rent is unpaid for a long time.</li>
+          <li>	Customers must maintain the locker and cannot store prohibited items.</li>
+	       <li>Access is given only to authorized persons (owner, nominee, or joint holder).</li>
+         
+          </ul>
+          <div className="button-group">
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+              🔊 Read Aloud
+            </button>
+            <button className="stop-btn" onClick={handleStop}>
+              ⏹ Stop
+            </button>
+          </div>
+        </div> */}
       </div>
-     <Footer/>
-</div>
-  );
-};
 
-export default AtmServices;
+      <TextToSpeech text={textToRead} stop={handleStop} />
+
+      {/* Button to open the popup
+      <button className="documents-btn" onClick={() => setShowPopup(true)}>
+        Documents Required
+      </button> */}
+
+      {/* Popup Box */}
+      {/* {showPopup && ( */}
+        {/* // <div className="popup-box show">
+          <div className="popup-content">
+            <h3>Required Documents</h3>
+            <ul id="documents-list">
+              <li>Identity Proof (Aadhar, PAN Card)</li>
+              <li>Address Proof (Utility Bill, Passport)</li>
+              <li>Income Proof (Salary Slip, ITR)</li>
+              <li>Bank Statements (Last 6 Months)</li>
+              <li>Property Documents</li>
+            </ul>
+            <div className="button-group">
+              <button
+                className="read-aloud-btn"
+                onClick={() => {
+                  const docText = Array.from(document.querySelectorAll("#documents-list li"))
+                    .map(li => li.textContent)
+                    .join(". ");
+                  handleReadAloud(`Required Documents: ${docText}`);
+                }}
+              >
+                🔊 Read Aloud
+              </button>
+              <button className="stop-btn" onClick={handleStop}>
+                ⏹ Stop
+              </button>
+            </div>
+            <button className="close-btn" onClick={() => setShowPopup(false)}>Close</button>
+          </div> */}
+         {/* </div> */}
+      {/* )} */}
+
+      <Footer />
+     </div>
+  );
+ };  
+
+export default ATM;  

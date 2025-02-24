@@ -1,15 +1,15 @@
-.digital-container {
+.tax-container {
   text-align: center;
 }
 
 .page-title {
   font-size: 24px;
   color: #004d00;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.digital-info-container {
+.tax-info-container {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -19,7 +19,7 @@
   margin: 0 auto;
 }
 
-.digital-box {
+.tax-box {
   width: 50%;
   padding: 35px;
   background: #f5f5f5;
@@ -31,13 +31,13 @@
   justify-content: space-between;
 }
 
-.digital-box h3 {
+.tax-box h3 {
   color: #004d00;
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.digital-box ul {
+.tax-box ul {
   font-size: 17px;
   color: #333;
 }
