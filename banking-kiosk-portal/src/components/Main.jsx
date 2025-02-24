@@ -27,7 +27,7 @@ const Gold = lazy(() => import("./Goldloan"))
 const Personal = lazy(() => import("./Perloan"))
 const Vehicle = lazy(() => import("./Vehloan"))
 const Business = lazy(() => import("./Busiloan"))
-const Chat = lazy(() => import("./ChatPopup"))
+const Chat = lazy(() => import("./Faq"))
 
 export default function Main(props) {
     return (
@@ -155,7 +155,7 @@ export default function Main(props) {
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><Business /></Suspense>}></Route>} 
 
-                    {<Route exact path="/chatPopup" element={<Suspense fallback={
+                    {<Route exact path="/faq" element={<Suspense fallback={
                     <div className="spinner=box">
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><Chat /></Suspense>}></Route>} 

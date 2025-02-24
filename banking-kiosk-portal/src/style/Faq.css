@@ -1,0 +1,89 @@
+/* FAQ Container */
+.faq-container {
+    width: 100%;
+    /* margin: 40px auto; */
+    /* padding: 20px; */
+    /* background: #1e1e1e; */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Category Header */
+.faq-category {
+    font-size: 1.5rem;
+    color: #9d8f8f;
+    /* background: #0d1b2a; */
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Accordion Styling */
+.accordion {
+    background: transparent;
+}
+
+/* Accordion Item */
+.accordion-item {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 6px !important;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.accordion-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Accordion Header */
+.accordion-button {
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #0d1b2a;
+    color: white !important;
+    padding: 12px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+.accordion-button:hover,
+.accordion-button:focus {
+    background-color: #162d4d !important;
+}
+
+/* Active Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: #162d4d !important;
+    color: white;
+    box-shadow: none;
+}
+
+/* Accordion Body */
+.accordion-body {
+    font-size: 0.95rem;
+    color: #ddd;
+    padding: 15px;
+    background: #333;
+    border-radius: 0px 0px 6px 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 15px;
+    }
+
+    .accordion-button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .accordion-body {
+        font-size: 0.85rem;
+        padding: 12px;
+    }
+}

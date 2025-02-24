@@ -12,7 +12,7 @@ const Header = () => {
         <div className='dashboard-logo'>
         <img src={bankIcon} alt="Bank Logo" className="bank-logo" />
             <h1 className="shiny-text">GLOBAL BANK</h1>
-             <Link to="/chat" className='nav'>
+             <Link to="/faq" className='nav'>
               <p>Chat</p>
             </Link>
         </div>

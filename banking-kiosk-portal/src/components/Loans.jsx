@@ -13,7 +13,7 @@ import vloan from '../assets/car.png'
 // import React from "react";
 
 const loans = [
-  { path: "/homeloan", img: hloan, label: "Tax Loan" },
+  { path: "/homeloan", img: hloan, label: "Home Loan" },
   { path: "/eduloan", img: edu, label: "Education Loan" },
   { path: "/busiloan", img: bloan, label: "Business Loan" },
   { path: "/perloan", img: ploan, label: "Personal Loan" },
