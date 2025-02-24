@@ -1,132 +1,80 @@
-.salary-page {
-    width:100%;
-    /* max-width: 800px; */
-    /* margin-top: 8px; */
-    /* text-align: center; */
-    /* padding: 20px; */
-    background: linear-gradient(135deg, #8f94fb);
-    /* border-radius: 15px; */
-    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.2);
-    color: rgb(2, 59, 6);
-    display: flex;
-    justify-content: flex-start; /* Aligns content to the left */
-    
-}
-
-/* .bill-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: scale(0.8);
-    animation: fadeInScale 1s ease-out forwards;
-} */
-
-/* List Styles */
-
-.salary-account-header {
-    font-size: 30px;
-    font-weight: bold;
-    color: #1e721b;
+.salary-account-container {
     text-align: center;
-    margin-bottom: 15px;
-}
-.salary-content {
-    width: 100%;
-    /* max-width: 700px; */
-    /* margin: 30px ; */
-    /* margin-right: 30px; */
     padding: 20px;
-    padding-top: 0px;
-    background-image: url('../assets/bacground.png');
-    background-size: cover;
-    /* border-radius: 15px; */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  body {
+    background-image: url('../assets/bacground.png'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+}
+
+  /* Adjust spacing between boxes */
+  .account-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px; /* Adds spacing between account boxes */
+  }
+  
+  .account-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    width: 30%;
     text-align: left;
-}
-
-.salary-in{
+    display: flex;
+    flex-direction: column;
+    min-height: 350px; /* Increased height */
+    max-height: 500px; /* Adjusted max height */
+  }
+  
+  /* Scrollable content area */
+  .account-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 210px; /* Adjusted to fit new box height */
     padding-right: 10px;
+  }
+  
+  /* Keep buttons visible */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers buttons horizontally */
+    gap: 15px; /* Adds spacing between buttons */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 20px; /* Adjust this value to move buttons down */
 }
 
-.salary-content h3 {
-    color: #1e721b;
+.button-container button {
+    padding: 10px 20px;
+}
+
+  .read-aloud, .stop {
+    width: 150px; /* Ensures uniform button width */
+    padding: 10px;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    /* margin-bottom: 15px; */
-}
-
-/* Bold List Items */
-.salary-content ol li,
-.salary-content ul li {
-    font-weight: bold;
-    font-size: 18px;
-    /* margin-bottom: 10px; */
-    /* margin: 10px 0; */
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: fadeInLeft 0.5s ease-out forwards;
-}
-
-.salary-content ol li:nth-child(1) { animation-delay: 0.3s; }
-.salary-content ol li:nth-child(2) { animation-delay: 0.6s; }
-.salary-content ol li:nth-child(3) { animation-delay: 0.9s; }
-.salary-content ol li:nth-child(4) { animation-delay: 1.2s; }
-.salary-content ol li:nth-child(5) { animation-delay: 1.5s; }
-
-.salary-content ul li:nth-child(1) { animation-delay: 1.8s; }
-.salary-content ul li:nth-child(2) { animation-delay: 2.1s; }
-.salary-content ul li:nth-child(3) { animation-delay: 2.4s; }
-.salary-content ul li:nth-child(4) { animation-delay: 2.7s; }
-.salary-content ul li:nth-child(5) { animation-delay: 3s; }
-
-/* Letter-by-Letter Animation */
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* 3D Effect for the Page */
-.salary-page,
-.salary-content {
-    perspective: 1000px;
-}
-
-/* .bill-title, 
-.locate-content h3 {
-    transform-style: preserve-3d;
-    transform: rotateX(10deg);
-    animation: text3D 1s ease-in-out forwards;
-} */
-
-@keyframes text3D {
-    0% {
-        transform: rotateX(90deg);
-        opacity: 0;
-    }
-    100% {
-        transform: rotateX(0deg);
-        opacity: 1;
-    }
-}
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .read-aloud {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .stop {
+    background-color: #d9534f;
+    color: white;
+  }
+  
