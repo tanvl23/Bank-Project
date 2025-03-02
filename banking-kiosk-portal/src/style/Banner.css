@@ -1,57 +1,87 @@
-/* Make the container take full viewport height */
 .banner-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000;
-    overflow: hidden;
-  }
-  
-  /* Ensure the carousel itself takes full height */
-  .full-screen-carousel {
-    width: 100vw;
-    height: 90vh;
-  }
-  
-  /* Make images fill the entire screen properly */
-  .banner-image {
-    width: 100vw;
-    height: 90vh;
-    object-fit: cover; /* Ensures image fills screen without distortion */
-  }
-  
-  /* Caption styling */
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  /* Button container to keep it centered */
-  .button-container {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 20px;
-  }
-  
-  /* Style for the button */
-  .home-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .home-btn:hover {
-    background-color: #0056b3;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-screen-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Increase Loader Size */
+/* .loader-container {
+  width: 100px;
+  height: 100px;
+} */
+
+.banner-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  bottom: 10%;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home-btn {
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.loader-container {
+  width: 80px !important;  /* Increase size */
+  height: 80px !important; /* Increase size */
+  border-width: 8px !important; /* Thicker border */
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+}

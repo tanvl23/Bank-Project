@@ -1,80 +1,76 @@
-.saving-account-container {
-    text-align: center;
-    padding: 20px;
-  }
-  body {
-    background-image: url('../assets/bacground.png'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repetition */
-    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+/* Individual account boxes */
+.account-box {
+  width: 30%;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  border: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px; /* Ensures enough height */
+  max-height: 450px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensures proper positioning */
 }
 
-  /* Adjust spacing between boxes */
-  .account-sections {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    gap: 20px; /* Adds spacing between account boxes */
-  }
-  
+/* Scrollable content inside account boxes */
+.account-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 250px;
+  padding-right: 10px;
+}
+
+/* Button container placed at the bottom */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  width: 100%; /* Ensures full width */
+  position: absolute;
+  bottom: 10px; /* Positions buttons at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Button styles */
+.read-aloud, .stop {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 80%; /* Ensures uniform width */
+  text-align: center;
+  font-weight: bold;
+}
+
+.read-aloud {
+  background: #008000;
+  color: white;
+}
+
+.stop {
+  background: #b30000;
+  color: white;
+}
+
+.read-aloud:hover {
+  background-color: #006600;
+}
+
+.stop:hover {
+  background-color: #990000;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
   .account-box {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 12px;
-    width: 30%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    min-height: 350px; /* Increased height */
-    max-height: 500px; /* Adjusted max height */
+    width: 90%;
   }
-  
-  /* Scrollable content area */
-  .account-content {
-    flex-grow: 1;
-    overflow-y: auto;
-    max-height: 210px; /* Adjusted to fit new box height */
-    padding-right: 10px;
-  }
-  
-  /* Keep buttons visible */
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers buttons horizontally */
-    gap: 15px; /* Adds spacing between buttons */
-  }
-  .button-container {
-    display: flex;
-    justify-content: center; /* Centers buttons horizontally */
-    gap: 10px; /* Adds space between buttons */
-    margin-top: 20px; /* Adjust this value to move buttons down */
 }
-
-.button-container button {
-    padding: 10px 20px;
-}
-
-  .read-aloud, .stop {
-    width: 150px; /* Ensures uniform button width */
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-  }
-  
-  .read-aloud {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .stop {
-    background-color: #d9534f;
-    color: white;
-  }
-  

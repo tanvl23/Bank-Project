@@ -13,13 +13,9 @@ import rules from "../assets/rules.png";
 import updates from "../assets/updates.png";
 
 const cust = [
-  { path: "/loacteus", img: locate, label: "Locate Us" },
+  { path: "/locate", img: locate, label: "Locate Us" },
   { path: "/rules", img: rules, label: "Rules and Regulations" },
   { path: "/updates", img: updates, label: "Updates" },
-  // { path: "/atm", img: atm , label: "ATM Services" },
-  // { path: "/locker", img: locker, label: "Locker Services" },
-  // { path: "/digital", img: digi, label: "Digital Services" },
-  // { path: "/insurance", img: insur, label: "Insurance Services" },
 ];
 
 const CustomerSupport = () => {

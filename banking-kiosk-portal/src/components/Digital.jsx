@@ -34,7 +34,7 @@ const Digital = () => {
          <li>Some services require linking the mobile number to the bank account.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail Digital Banking.Customers must have a savings or current account with the bank.Register for net banking or mobile banking services.Secure login using user ID, password, and OTP authentication.Some services require linking the mobile number to the bank account.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -53,7 +53,7 @@ const Digital = () => {
             </ul>
          
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Free for Basic Services: Balance inquiry, fund transfers, and online shopping are usually free.Transaction Charges: Some fund transfers (RTGS, NEFT) may have small charges.Cardless Cash Withdrawal Fee: Certain banks charge a fee for cash withdrawal via mobile banking.Premium Services: Advanced digital services like priority banking apps may have subscription fees.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -73,7 +73,7 @@ const Digital = () => {
          <li>QR Code Payments: Scan and pay using mobile banking or UPI apps.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Types of Digital Banking Services.Internet Banking: Access full banking services through a web browser.Mobile Banking Apps: Perform transactions and manage accounts via a smartphone app.UPI (Unified Payments Interface): Instant fund transfer using mobile numbers or UPI IDs.E-Wallets: Digital wallets for online payments, shopping, and P2P transfers.Chatbots & AI Banking: Virtual assistants to help with banking queries.USSD Banking: Offline mobile banking for basic transactions via USSD codes (*99# for UPI).QR Code Payments: Scan and pay using mobile banking or UPI apps.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

@@ -24,11 +24,11 @@ const SalaryAccount = () => {
       <Header />
       <div className="salary-account-container">
         <h2>Salary Account Management</h2>
-        <div className="account-sections">
+        <div className="sal-acc-sections">
           
           {/* Creating Account Section */}
-          <div className="account-box">
-            <div className="account-content">
+          <div className="sal-acc-box">
+            <div className="sal-acc-content">
               <h3>How to Create a Salary Account</h3>
               <p><strong>Step 1:</strong> Check Eligibility</p>
               <p>You must be employed by a company that offers salary account benefits.<br />Some banks require a minimum salary to open an account.</p>
@@ -68,26 +68,26 @@ const SalaryAccount = () => {
           </div>
 
           {/* Managing Account Section */}
-          <div className="account-box">
-            <div className="account-content">
+          <div className="sal-acc-box">
+            <div className="sal-acc-content">
               <h3>How to Manage Your Salary Account</h3>
-              <p><strong>Step 1:</strong> Receive Salary Automatically – Your salary is credited directly to your account every month. You will receive an SMS/Email alert when your salary is deposited.</p>
-              <p><strong>Step 2:</strong> Withdraw & Transfer Money – Use your Debit Card/UPI/Net Banking to withdraw cash or transfer money. Some salary accounts offer higher withdrawal limits.</p>
-              <p><strong>Step 3:</strong> Monitor Transactions & Statements – Log in to Net Banking/Mobile Banking to check:</p>
+              <p><strong>1.</strong> Receive Salary Automatically – Your salary is credited directly to your account every month. You will receive an SMS/Email alert when your salary is deposited.</p>
+              <p><strong>2.</strong> Withdraw & Transfer Money – Use your Debit Card/UPI/Net Banking to withdraw cash or transfer money. Some salary accounts offer higher withdrawal limits.</p>
+              <p><strong>3.</strong> Monitor Transactions & Statements – Log in to Net Banking/Mobile Banking to check:</p>
               <ul>
                 <li>✅ Salary credits</li>
                 <li>✅ Deductions (if any)</li>
                 <li>✅ Transaction history</li>
               </ul>
-              <p><strong>Step 4:</strong> Set Up Auto Payments & Savings – Set up automatic bill payments for electricity, rent, and loans. Open a Fixed Deposit (FD) or Recurring Deposit (RD) to save money.</p>
-              <p><strong>Step 5:</strong> Avail Salary Account Benefits – Some salary accounts offer:</p>
+              <p><strong>4.</strong> Set Up Auto Payments & Savings – Set up automatic bill payments for electricity, rent, and loans. Open a Fixed Deposit (FD) or Recurring Deposit (RD) to save money.</p>
+              <p><strong>5.</strong> Avail Salary Account Benefits – Some salary accounts offer:</p>
               <ul>
                 <li>✅ Zero balance requirement (No minimum balance needed)</li>
                 <li>✅ Overdraft facility (Borrow money if your balance is low)</li>
                 <li>✅ Credit card with pre-approved limits</li>
                 <li>✅ Insurance coverage</li>
               </ul>
-              <p><strong>Step 6:</strong> Keep Your Account Secure – Enable Two-Factor Authentication (2FA) for online banking. Change your password/PIN regularly. Report lost/stolen debit cards immediately.</p>
+              <p><strong>6.</strong> Keep Your Account Secure – Enable Two-Factor Authentication (2FA) for online banking. Change your password/PIN regularly. Report lost/stolen debit cards immediately.</p>
               <p>✅ Your salary account is now managed efficiently!</p>
             </div>
             <div className="button-container">
@@ -97,8 +97,8 @@ const SalaryAccount = () => {
           </div>
 
           {/* Closing Account Section */}      
-            <div className="account-box">
-            <div className="account-content">
+            <div className="sal-acc-box">
+            <div className="sal-acc-content">
               <h3>How to Close a Salary Account</h3>
               <p><strong>Step 1:</strong> Stop Salary Credits</p>
               <p>Inform your employer to deposit your salary in a different account.</p>
@@ -129,5 +129,5 @@ const SalaryAccount = () => {
     </div>
   );
 };
-
 export default SalaryAccount;
+

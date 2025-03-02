@@ -30,6 +30,7 @@ app.use(function (req, res, next) {
 
 app.use("/banking", require("./routes/login-route").router);
 app.use("/banking", require("./routes/faq-route").router);
+app.use("/banking", require("./routes/banner-route"));
 
 app.use((req, res, next) => {
     console.log(req.body);

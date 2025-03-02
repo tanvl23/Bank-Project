@@ -34,7 +34,7 @@ const Bill = () => {
          <li>Payments can be made instantly or scheduled in advance.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail Bill Payment Services.Customers must have a savings or current account with the bank.Registration may be required for online bill payment via net banking or mobile banking apps.Customers can link billers to their bank account for easy recurring payments.Payments can be made instantly or scheduled in advance..")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -51,7 +51,7 @@ const Bill = () => {
             </ul>
          
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Free for Many Services: Some banks provide free bill payments for certain categories.Transaction Fees: Some payments (like credit card bills from another bank) may have small charges.Late Payment Penalty: If payments are not made on time, service providers may impose penalties.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -65,11 +65,11 @@ const Bill = () => {
           <li>Net Banking & Mobile Banking Payments: Customers can log in to their bank’s app/website to pay bills.</li>
           <li>Bank Branch Payments: Some banks allow cash or cheque payments at the branch.</li>
 	       <li>Auto-Debit Services: Customers can set up standing instructions for automatic deduction from their accounts.</li>
-         <li>•	BBPS (Bharat Bill Payment System in India): A centralized payment system that allows seamless bill payments via multiple bank channels.</li>
+         <li>BBPS (Bharat Bill Payment System in India): A centralized payment system that allows seamless bill payments via multiple bank channels.</li>
 
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("ypes of Bill Payment Services.Net Banking & Mobile Banking Payments: Customers can log in to their bank’s app/website to pay bills.Bank Branch Payments: Some banks allow cash or cheque payments at the branch.Auto-Debit Services: Customers can set up standing instructions for automatic deduction from their accounts.BBPS (Bharat Bill Payment System in India): A centralized payment system that allows seamless bill payments via multiple bank channels.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

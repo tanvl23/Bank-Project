@@ -1,69 +1,73 @@
-import React from 'react';
-import { Button, Carousel, Image } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; 
-import login1 from '../assets/login1.png';
-import login2 from '../assets/login2.png';
-import login3 from '../assets/login3.png';
-import login4 from '../assets/login4.png';
-import login5 from '../assets/login5.png';
-import '../style/Banner.css'; // Ensure correct CSS file is imported
+import React, { useState, useEffect } from "react";
+import { Button, Image } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "../style/Banner.css";
+import { ClipLoader, GridLoader, PulseLoader } from "react-spinners";
+import { logBannerClick } from "../services/banner-service"; // Import API function
+
+// Import banner images
+import login2 from "../assets/login2.png";
+import login3 from "../assets/login3.png";
+import login4 from "../assets/login4.png";
+import login5 from "../assets/login5.png";
+
+const images = [login2, login3, login4, login5]; // Array of images
+const captions = ["Safe Banking", "Quick Loans", "Easy Solutions", "Various Services"]; // Captions
 
 const Banner = () => {
   const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0); // Track active image index
+  const [loading, setLoading] = useState(false); // Track loading state
 
+  // Automatically change the active image every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  // Handle button click
   const handleButtonClick = async () => {
+    setLoading(true); // Show full-screen loader
     try {
-      await axios.post('http://localhost:5000/api/increment-click'); // Call API
-      navigate('/home'); // Navigate to home
+      await logBannerClick(activeIndex + 1); // Log banner click with current index
     } catch (error) {
-      console.error('Error tracking button click:', error);
+      console.error("Failed to log banner click", error);
     }
+    setTimeout(() => {
+      navigate("/dashboard"); // Navigate after delay
+    }, 2000);
   };
+
   return (
     <div className="banner-container">
-      {/* Full-Screen Rotating Banners */}
-      <Carousel fade controls={false} indicators={false} interval={3000} className="full-screen-carousel">
-        <Carousel.Item>
-          <Image className="banner-image" src={login1} alt="Welcome to Our Bank" />
-          <Carousel.Caption>
-            <h3>Welcome to Our Bank</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
+      {/* Full-Screen Loader */}
+      {loading && (
+        <div className="full-screen-loader">
+          <PulseLoader color="#ffffff" size={20} />
+          <p>Loading, please wait...</p>
+        </div>
+      )}
 
-        <Carousel.Item>
-          <Image className="banner-image" src={login2} alt="Welcome to Our Bank" />
-          <Carousel.Caption>
-            <h3>Safe and Secure Banking</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
+      {/* Image Display (Hidden when loading) */}
+      {!loading && (
+        <>
+          <div className="image-wrapper">
+            <Image className="banner-image" src={images[activeIndex]} alt="Banking Services" />
+            <div className="caption">
+              <h3>{captions[activeIndex]}</h3>
+            </div>
+          </div>
 
-        <Carousel.Item>
-          <Image className="banner-image" src={login3} alt="Welcome to Our Bank" />
-          <Carousel.Caption>
-            <h3>Quick and Easy Loans</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-
-          <Image className="banner-image" src={login4} alt="Welcome to Our Bank" />
-          <Carousel.Caption>
-            <h3> Easy Banking Solutions</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-
-          <Image className="banner-image" src={login5} alt="Welcome to Our Bank" />
-          <Carousel.Caption>
-            <h3>Various Banking Services</h3>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-
-      {/* Button Below the Carousel */}
-      <div className="button-container">
-        <Button className="home-btn" onClick={() => navigate('/home')}>Proceed to Home</Button>
-      </div>
+          {/* Navigation Button */}
+          <div className="button-container">
+            <Button className="home-btn" onClick={handleButtonClick}>
+              <p>Proceed to Home</p>
+            </Button>
+          </div>
+        </>
+      )}
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Header = () => {
         <div className="title-bar">
             
           <div className="nav-links">
-            <Link to="/" className='nav'>
+            <Link to="/dashboard" className='nav'>
               <p>Home</p>
             </Link>
             <Link to="/accinfo" className='nav'>

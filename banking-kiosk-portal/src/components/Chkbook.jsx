@@ -40,7 +40,7 @@ const Checkbook = () => {
          
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail Checkbook Services.Customers must have a savings or current account or a current business account with the bank.Submit a request through any of the following methods.Branch Visit: Fill out a checkbook request form.Net/Mobile Banking: Order online via the bank’s app or website.ATM: Some banks allow checkbook requests through ATMs.SMS or Customer Care: Request via registered mobile number or phone banking.The checkbook is delivered to the registered address within a few days.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -59,7 +59,7 @@ const Checkbook = () => {
             </ul>
          
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Free Checkbooks: Most banks offer a limited number of free checkbooks per year (e.g., first 1-2 checkbooks free).Additional Checkbook Charges: After free limits, banks charge a fee per checkbook (e.g., ₹100-₹200 for 20-50 leaves).Stop Payment Charges: A small fee is charged for stopping a payment on a lost/stolen check.Check Bounce Penalty: If a check is dishonored due to insufficient funds, banks impose a penalty.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -78,7 +78,7 @@ const Checkbook = () => {
 
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Types of Checkbook Services.Personal Checkbooks: Issued to individual account holders for personal transactions.Business/Corporate Checkbooks: Offered to companies and firms for business payments.Multi-City Checks: Can be encashed at any branch of the bank, regardless of the issuing city.CTS-2010 Compliant Checks: Modern, high-security checks as per RBI/NPCI guidelines for electronic clearing.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

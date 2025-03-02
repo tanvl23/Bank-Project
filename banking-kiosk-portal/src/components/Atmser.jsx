@@ -34,7 +34,7 @@ const ATM = () => {
          <li>	ATMs may have daily transaction limits set by the bank.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Use ATM Services.Customers must have a debit card, ATM card, or credit card issued by their bank.The card must be activated and linked to a valid bank account.Transactions require a 4-digit or 6-digit PIN for security.ATMs may have daily transaction limits set by the bank.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -53,7 +53,7 @@ const ATM = () => {
             </ul>
         
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Free Transactions: Most banks offer a limited number of free ATM transactions per month (e.g., 3-5 free withdrawals at other bank ATMs).Extra Transaction Charges: A small fee is charged for exceeding free monthly limits.Interbank ATM Charges: Using another bank’s ATM may incur a transaction fee after the free limit.International ATM Fees: Foreign ATM withdrawals have higher charges, along with currency conversion fees.Card Replacement Fee: If the ATM card is lost or stolen, banks charge a fee for reissuing a new one.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

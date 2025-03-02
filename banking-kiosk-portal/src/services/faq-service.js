@@ -1,32 +1,32 @@
 import axios from "axios";
 
-// Debug: Print the API URL to check if it's loaded correctly
 const URL = process.env.REACT_APP_MASTER_API;
 console.log("Loaded API URL:", URL);
 
-// export async function getFAQs() {
-//     try {
-//         let url = `${URL}/faqs`;
-//         console.log("Fetching FAQs from API:", url); // Debugging API request
+// Fetch categories
+export async function getFaqCategories() {
+    try {
+        let url = `${URL}/faq-categories`;
+        console.log("Fetching categories from API:", url);
 
-//         let response = await axios.get(url, { timeout: 10000 });
-//         return response.data;
+        let response = await axios.get(url, { timeout: 10000 });
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching FAQ categories:", error);
+        return [];
+    }
+}
 
-//     } catch (error) {
-//         console.error("FAQ Fetching Error:", error);
+// Fetch FAQs by category
+export async function getFAQs(category) {
+    try {
+        let url = `${URL}/faqs?category=${encodeURIComponent(category)}`;
+        console.log("Fetching FAQs from API:", url);
 
-//         if (error.response) {
-//             return { success: false, message: `Error: ${error.response?.data?.message || "Failed to fetch FAQs"}` };
-//         } else if (error.request) {
-//             return { success: false, message: "Network Error: No response from server. Please try again later." };
-//         } else {
-//             return { success: false, message: "Unexpected Error: " + error.message };
-//         }
-//     }
-// }
-
-export async function getFAQs() {
-    let url = `${URL}/faqs`;
-    let response = await axios.get(url, { timeout: 10000 });
-    return response.data;
+        let response = await axios.get(url, { timeout: 10000 });
+        return response.data;
+    } catch (error) {
+        console.error(`Error fetching FAQs for category ${category}:`, error);
+        return [];
+    }
 }

@@ -14,8 +14,8 @@ const Insur = lazy(() => import("./Insurance"))
 const Locker = lazy(() => import("./Locker"))
 const Digi = lazy(() => import("./Digital"))
 const Tax = lazy(() => import("./Tax"))
-const Cust = lazy(() => import("./custsupport"))
-const Locate = lazy(() => import("./Locateus"))
+const Cust = lazy(() => import("./Custsupport"))
+const Locate = lazy(() => import("./Loacte"))
 const Rules = lazy(() => import("./Rules"))
 const Updates = lazy(() => import("./Updates"))
 const Saving = lazy(() => import("./SavingAcc"))
@@ -30,12 +30,18 @@ const Personal = lazy(() => import("./Perloan"))
 const Vehicle = lazy(() => import("./Vehloan"))
 const Business = lazy(() => import("./Busiloan"))
 const Chat = lazy(() => import("./Faq"))
+const Banner = lazy(() => import("./Banner"))
 
 export default function Main(props) {
     return (
         <Container bsPrefix="main">
             <Routes>
                 <Route exact path="/" element={<Suspense fallback={
+                    <div className="spinner-box">
+                        <Spinner animation="border" className="spinner"></Spinner>
+                    </div>}><Banner /></Suspense>}></Route>
+
+                    <Route exact path="/dashboard" element={<Suspense fallback={
                     <div className="spinner-box">
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><Dashboard /></Suspense>}></Route>
@@ -95,7 +101,7 @@ export default function Main(props) {
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><Digi /></Suspense>}></Route>} 
 
-                    {<Route exact path="/locateus" element={<Suspense fallback={
+                    {<Route exact path="/locate" element={<Suspense fallback={
                     <div className="spinner=box">
                         <Spinner animation="border" className="spinner"></Spinner>
                     </div>}><Locate /></Suspense>}></Route>}

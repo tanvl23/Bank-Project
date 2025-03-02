@@ -34,7 +34,7 @@ const Locker = () => {
          <li>The locker is assigned based on availability, with priority given to existing customers.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail a Locker.Must have a savings or current account with the bank.Fill out the locker rental agreement and provide necessary KYC documents.Pay a refundable security deposit (in some cases).The locker is assigned based on availability, with priority given to existing customers.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -51,7 +51,7 @@ const Locker = () => {
             </ul>
          
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Annual rental fees vary based on the size of the locker and the bank’s location (urban or rural branches).Security deposit may be required.Penalty charges for late payments or not operating the locker for long durations.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -68,7 +68,7 @@ const Locker = () => {
          
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Terms & Conditions.Banks have the right to break open the locker if rent is unpaid for a long time.Customers must maintain the locker and cannot store prohibited items.Access is given only to authorized persons (owner, nominee, or joint holder).")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

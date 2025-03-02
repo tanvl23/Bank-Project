@@ -35,7 +35,7 @@ const Insurance  = () => {
          <li>Policy documents are issued digitally or in physical form.</li>
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Eligibility & Process to Avail Insurance Services.Customers must have a savings or current account with the bank (optional in some cases).Choose an insurance policy based on requirements (life, health, motor, etc.).Submit KYC documents (ID proof, address proof, and income proof for some policies).Pay the premium online or through auto-debit from the bank account.Policy documents are issued digitally or in physical form.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -53,7 +53,7 @@ const Insurance  = () => {
             </ul>
          
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("The process begins with filling out an online or offline application form, providing details such as personal information, income details, and property-related data. After submission, the bank conducts an initial verification followed by a property evaluation. The bank reviews the applicant's credit history, employment status, and financial standing. If eligible, the applicant will receive a sanction letter. After signing the loan agreement, the loan amount is disbursed directly to the seller or builder.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Charges & Fees.Premium Amount: Varies based on the type of insurance and coverage.Processing Fees: Some banks charge a small fee for policy processing.Late Payment Penalty: If premiums are not paid on time, penalties may be applicable.Claim Settlement Charges: Some claims may involve processing charges.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>
@@ -74,7 +74,7 @@ const Insurance  = () => {
          
           </ul>
           <div className="button-group">
-            <button className="read-aloud-btn" onClick={() => handleReadAloud("Users can apply for a home loan through multiple channels. They can visit the nearest Vistara Capital branch, apply via the official website, or use the mobile banking application. Dedicated loan officers are also available for personalized assistance.")}>
+            <button className="read-aloud-btn" onClick={() => handleReadAloud("Types of Insurance Offered by Bank.Life Insurance: Financial protection for the policyholder’s family in case of death.Health Insurance: Covers medical expenses, hospitalization costs, and critical illnesses.Motor Insurance: Covers damages to vehicles and third-party liabilities.Travel Insurance: Covers medical emergencies, trip cancellations, and lost baggage while traveling.Home Insurance: Protects homes against natural disasters, theft, and fire damage.Personal Accident Insurance: Offers financial support in case of accidental death or disability.Loan Insurance: Covers outstanding loan amounts in case of the borrower’s death or disability.")}>
               🔊 Read Aloud
             </button>
             <button className="stop-btn" onClick={handleStop}>

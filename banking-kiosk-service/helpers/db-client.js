@@ -10,4 +10,12 @@ const pool = new Pool({
     idleTimeoutMillis: 1000,
 });
 
+pool.on("error", (err) => {
+    console.error("🔥 DB Connection Error:", err);
+  });
+  
+  module.exports = {
+    query: (text, params) => pool.query(text, params),
+  };
+
 module.exports = { pool };

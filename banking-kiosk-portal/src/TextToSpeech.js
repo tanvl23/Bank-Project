@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect } from "react";
-=======
                                                                                                                                                                                                        import React, { useEffect } from "react";
->>>>>>> 96edabf419bf240cb8e5a109345772386ce541fc
 
 const TextToSpeech = ({ text, stop }) => {
   useEffect(() => {
@@ -21,8 +17,4 @@ const TextToSpeech = ({ text, stop }) => {
   return null; // No additional buttons, just controls speech
 };
 
-<<<<<<< HEAD
-export default TextToSpeech;
-=======
 export default TextToSpeech;
->>>>>>> 96edabf419bf240cb8e5a109345772386ce541fc

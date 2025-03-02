@@ -33,7 +33,7 @@ const Dashboard = () => {
   return (
     <div className="homepage">
       <Header />
-
+      {/* <InactivityHandler timeout={60000} /> */}
       {/* Main Content */}
       <main className="content">
   <div className="services">

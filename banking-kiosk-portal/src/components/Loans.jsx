@@ -17,7 +17,7 @@ const loans = [
   { path: "/eduloan", img: edu, label: "Education Loan" },
   { path: "/busiloan", img: bloan, label: "Business Loan" },
   { path: "/perloan", img: ploan, label: "Personal Loan" },
-  { path: "/gold", img: gloan, label: "Gold Loan" },
+  { path: "/goldloan", img: gloan, label: "Gold Loan" },
   { path: "/vehloan", img: vloan, label: "Vehical Loan" },
   // { path: "/", img: insur, label: "Insurance Loan" },
 ];

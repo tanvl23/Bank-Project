@@ -3,9 +3,9 @@ const { pool } = require("./db-client");
 class FAQHelper {
     async getFaqCategories() {
         try {
-            const query = "SELECT * FROM faqs"; // Fetch unique categories
+            const query = "SELECT DISTINCT category FROM faqs"; // Fetch unique categories
             const result = await pool.query(query);
-            return result.rows;
+            return result.rows.map(row => row.category);
         } catch (error) {
             console.error("Error fetching FAQ categories:", error);
             throw error;
@@ -25,3 +25,4 @@ class FAQHelper {
 }
 
 module.exports = { FAQHelper };
+    

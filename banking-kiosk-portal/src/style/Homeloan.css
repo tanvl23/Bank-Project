@@ -1,128 +1,206 @@
-/* .hmloan-container {
-    width: 100%;
-    margin-top: 8px;
-    text-align: center;
-    background: linear-gradient(135deg, #8f94fb);
-    box-shadow: 20px 10px 20px rgba(3, 93, 18, 0.2);
-    color: rgb(2, 59, 6);
-  } */
+.home-loan-container {
+  text-align: center;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #004d00;
+  margin-bottom: 20px;
+}
+
+.loan-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  width: 90%;
   
-  .hmloan-title {
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: scale(0.8);
-    animation: fadeInScale 1s ease-out forwards;
-  }
-  
-  /* List & Paragraph Styles */
-  .hmloan-info {
-    width: 100%;
-    padding: 20px;
-    padding-top: 5px;
-    background-image: url('../assets/bacground.png');
-    background-size: cover;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hmloan-info-in {
-    padding-right: 10px;
-  }
-  
-  .hmloan-info h2 {
-    color: #1e721b;
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  .hmloan-info h3 {
-    color: #1e721b;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Animation for List Items */
-  .hmloan-info ol li,
-  .hmloan-info ul li {
-    font-weight: bold;
-    font-size: 18px;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: fadeInLeft 0.5s ease-out forwards;
-  }
-  
-  .hmloan-info ol li:nth-child(1), .hmloan-info ul li:nth-child(1) { animation-delay: 0.3s; }
-  .hmloan-info ol li:nth-child(2), .hmloan-info ul li:nth-child(2) { animation-delay: 0.6s; }
-  .hmloan-info ol li:nth-child(3), .hmloan-info ul li:nth-child(3) { animation-delay: 0.9s; }
-  .hmloan-info ol li:nth-child(4), .hmloan-info ul li:nth-child(4) { animation-delay: 1.2s; }
-  .hmloan-info ol li:nth-child(5), .hmloan-info ul li:nth-child(5) { animation-delay: 1.5s; }
-  .hmloan-info ol li:nth-child(5), .hmloan-info ul li:nth-child(6) { animation-delay: 1.7s; }
-  
-  /* Animation for Paragraphs */
-  .hmloan-info p {
-    font-size: 18px;
-    color: #444;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: fadeInLeft 0.8s ease-out forwards;
-  }
-  
-  /* Delaying each paragraph */
-  .hmloan-info p:nth-of-type(1) { animation-delay: 0.4s; }
-  .hmloan-info p:nth-of-type(2) { animation-delay: 0.8s; }
-  .hmloan-info p:nth-of-type(3) { animation-delay: 1.2s; }
-  
-  /* Letter-by-Letter Animation */
-  @keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-  }
-  
-  /* 3D Effect */
-  .hmloan-container,
-  .hmloan-info {
-    perspective: 1000px;
-  }
-  
-  .hmloan-title, 
-  .hmloan-info h3 {
-    transform-style: preserve-3d;
-    transform: rotateX(10deg);
-    animation: text3D 1s ease-in-out forwards;
-  }
-  
-  @keyframes text3D {
-    0% {
-        transform: rotateX(90deg);
-        opacity: 0;
-    }
-    100% {
-        transform: rotateX(0deg);
-        opacity: 1;
-    }
-  }
-  
-  
-  
+  margin: 0 auto;
+}
+
+.loan-box {
+  width: 50%;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loan-box h3 {
+  color: #004d00;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.loan-box p {
+  font-size: 17px;
+  color: #333;
+}
+
+.read-aloud, .stop-audio {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.read-aloud {
+  background: #008000;
+  color: white;
+}
+
+.stop-audio {
+  background: #800000;
+  color: white;
+}
+
+.documents-btn {
+  margin-top: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: #004d00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.documents-btn:hover {
+  background: #006600;
+}
+
+/* Read Aloud Button */
+.read-aloud-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 70%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.read-aloud-btn:hover {
+  background-color: darkgreen;
+}
+
+/* Stop Button */
+.stop-btn {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  width: 70%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.stop-btn:hover {
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  align-items: center; /* Push buttons to the bottom */
+}
+
+/* Popup Background (Dimming Effect) */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensures it's above other elements */
+}
+
+/* Popup Box Styling */
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;  /* Increased width */
+  max-width: 90%;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+/* Popup Content */
+.popup-content {
+  text-align: center; /* Centering content */
+}
+
+.popup-content h3 {
+  font-size: 22px;
+  color: #004d00;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.popup-content ul {
+  padding: 0;
+  list-style: none;
+  text-align: left; /* Aligning list items */
+}
+
+.popup-content ul li {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Close Button */
+.close-btn {
+  background: #800000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto 0; /* Centering button */
+  width: 120px;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: red;
+}
