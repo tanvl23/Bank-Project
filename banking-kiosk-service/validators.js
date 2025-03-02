@@ -1,5 +1,5 @@
-//const responseJson=require("./response.json");
-//const constants = require("./constants");
+// const responseJson=require("./response.json");
+// const constants = require("./constants");
 
 exports.validateInput=(req,res,next)=>{
     let isValid = true;

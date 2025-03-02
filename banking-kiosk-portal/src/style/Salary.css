@@ -1,0 +1,94 @@
+.salary-account-container {
+  text-align: center;
+  padding: 20px;
+}
+
+body {
+  background-image: url('../assets/bacground.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Flex container for the three sections */
+.sal-acc-sections {
+  display: flex;
+  justify-content: space-between; /* Space evenly between boxes */
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 20px; /* Adds spacing between boxes */
+}
+
+/* Box styling */
+.sal-acc-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 30%; /* Ensures three boxes fit in one row */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px; /* Adjust height as needed */
+  max-height: 500px;
+}
+
+/* Scrollable content area */
+.sal-acc-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 210px; /* Adjust to fit new box height */
+  padding-right: 10px;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+}
+
+.read-aloud,
+.stop {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.read-aloud {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.stop {
+  background-color: #d9534f;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sal-acc-box {
+      width: 45%; /* Two boxes in a row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .sal-acc-sections {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .sal-acc-box {
+      width: 90%; /* Single column layout for small screens */
+  }
+}

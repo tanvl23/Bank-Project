@@ -1,4 +1,6 @@
-import { useNavigate } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import "../style/Loans.css";
 import Header from './Header';
 import Footer from './Footer';
 import hloan from '../assets/home.png'
@@ -7,94 +9,62 @@ import bloan from '../assets/busi.png'
 import ploan from '../assets/pers.png'
 import gloan from '../assets/gold.png'
 import vloan from '../assets/car.png'
-import { Link } from "react-router-dom";
-import React from "react";
+// import { Link } from "react-router-dom";
+// import React from "react";
 
+const loans = [
+  { path: "/homeloan", img: hloan, label: "Home Loan" },
+  { path: "/eduloan", img: edu, label: "Education Loan" },
+  { path: "/busiloan", img: bloan, label: "Business Loan" },
+  { path: "/perloan", img: ploan, label: "Personal Loan" },
+  { path: "/goldloan", img: gloan, label: "Gold Loan" },
+  { path: "/vehloan", img: vloan, label: "Vehical Loan" },
+  // { path: "/", img: insur, label: "Insurance Loan" },
+];
 
 const LoanServices = () => {
-  const navigate = useNavigate;
+  
+  const navigate = useNavigate();
+  const [visibleIndexes, setVisibleIndexes] = useState([0, 1]); // Show first two tabs initially
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleIndexes(([first, second]) => {
+        let nextFirst = (first + 2) % loans.length;
+        let nextSecond = (second + 2) % loans.length;
+        return [nextFirst, nextSecond];
+      });
+    }, 5000); // Change tabs every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div>
+    <div className="homepage-loan">
       <Header />
 
-      <div className="container">
-
-        <main className="main-content">
-          <h2>Loans</h2>
-          <div className="loan-options">
-            <div className="loan-card" onClick={() => {
-              navigate('/homeloan')
-
-            }}>
-              {/* <img src="/accinfo.png" alt="Account Information" /> */}
-              <Link to="/homeloan" className="icon-container">
-                <img src={hloan} alt="Home Loan" />
-                <p>Home Loan</p>
-              </Link>
-              {/* <p>Account Information</p> */}
-            </div>
-
-
-            <div className="loan-card" onClick={() => {
-              navigate('/eduloan')
-            }}>
-              <Link to="/eduloan" className="icon-container">
-                <img src={edu} alt="Car Loans" />
-                <p>Educationl Loan </p>
-              </Link>
-              {/* <img src="/bank-logo.png" alt="Banking Services" />
-            <p>Banking Services</p> */}
-            </div>
-
-
-            <div className="loan-card" onClick={() => {
-              navigate('./busiloan')
-            }}>
-              <Link to="/busiloan" className="icon-container">
-                <img src={bloan} alt="Business Loan" />
-                <p>Business Loan</p>
-              </Link>
-              {/* <img src="/loans-icon.png" alt="Loans" /> */}
-              {/* <p>Loans</p> */}
-            </div>
-
-            <div className="loan-card" onClick={() => {
-              navigate('./perloan')
-            }}>
-              <Link to="/perloan" className="icon-container">
-                <img src={ploan} />
-                <p>Personal Loan</p>
-              </Link>
-              {/* <img src="/custmsupport.png" alt="Customer Support" />
-            <p>Customer Support</p> */}
-            </div>
-
-            <div className="loan-card" onClick={() => {
-              navigate('./goldloan')
-            }}>
-              <Link to="/goldloan" className="icon-container">
-                <img src={gloan} />
-                <p>Gold Loan</p>
+      {/* Main Content */}
+      <main className="content-loan">
+        <div className="loan">
+          {loans.map((tab, index) => (
+            <div
+              key={index}
+              className={`loan-item ${visibleIndexes.includes(index) ? "active" : "hidden"}`}
+              onClick={() => navigate(tab.path)}
+            >
+              <Link to={tab.path} className="loan-icon-container">
+                <img src={tab.img} alt={tab.label} />
+                <p>{tab.label}</p>
               </Link>
             </div>
-
-            <div className="loan-card" onClick={() => {
-              navigate('./vehloan')
-            }}>
-              <Link to="/vehloan" className="icon-container">
-                <img src={vloan} alt="Vehicle Loan" />
-                <p>Vehicle Loan</p>
-              </Link>
-            </div>
-
-          </div>
-        </main>
-      </div>
+          ))}
+        </div>
+      </main>
 
       <Footer />
-
     </div>
   );
 };
+
 
 export default LoanServices;

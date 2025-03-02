@@ -1,0 +1,97 @@
+/* Updates.css  */
+.updates-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+body {
+    background-image: url('../assets/bacground.png'); /* Corrected typo in filename */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Adjust spacing between boxes */
+.update-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px; /* Adds spacing between update boxes */
+}
+
+.update-box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 35%; /* Adjusted width for better responsiveness */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Increased height for better content fit */
+    max-height: 600px;
+    overflow: hidden;
+}
+
+/* Scrollable content area */
+.update-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 250px; /* Adjusted for new box height */
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Heading styles */
+.update-box h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Highlight key update points */
+.update-box ul {
+    list-style: none;
+    padding: 0;
+}
+.update-box ul li::before {
+    content: '🔹'; /* Adds a bullet icon */
+    margin-right: 5px;
+}
+
+/* Keep buttons visible */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.read-aloud {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.stop {
+    background-color: #d9534f;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .update-box {
+        width: 90%; /* Full width on smaller screens */
+    }
+}

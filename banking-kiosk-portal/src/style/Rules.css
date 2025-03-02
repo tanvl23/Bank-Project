@@ -1,0 +1,113 @@
+.rules-container { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .rules-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .rules-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    max-width: 90%;
+    scrollbar-width: none; /* Hide scrollbar for a clean look */
+  }
+  
+  .rules-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  body {
+    background-image: url('../assets/bacground.png'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  }
+  
+  .rule-card {
+    min-width: 380px;
+    max-width: 400px;
+    height: 300px;  /* Reduced height */
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .rule-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .rule-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .rule-text {
+    height: 200px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 5px; /* Space for scrollbar */
+  }
+  
+  /* Custom scrollbar for inside the card */
+  .rule-text::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .rule-text::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  /* Buttons */
+  .tts-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Read Aloud Button - Green */
+  .tts-buttons button:first-child {
+    background-color: #4CAF50; /* Green */
+  }
+  
+  .tts-buttons button:first-child:hover {
+    background-color: #388E3C; /* Dark Green */
+  }
+  
+  /* Stop Button - Red */
+  .tts-buttons button:last-child {
+    background-color: #d9534f; /* Red */
+  }
+  
+  .tts-buttons button:last-child:hover {
+    background-color: #C9302C; /* Dark Red */
+  }
+  
+  .tts-buttons button {
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }

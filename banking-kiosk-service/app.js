@@ -3,7 +3,7 @@ let cors = require("cors");
 //const { validateAuth}=require("./auth");
 //const { getUserInfo}=require("./utils/user-info");
 const { validateInput } = require("./validators");
-let app = express()
+let app = express();
 app.disable('x-powered-by')
 app.disable('etag')
 app.use(express.json({ Limit: process.env.LIMIT }));
@@ -13,6 +13,7 @@ let corsOption = {
     origin: process.env.ORIGIN,
 };
 app.use(cors(corsOption));
+app.use(express.json());
 // app.use([validateAuth]);
 // app.use([getUserInfo]);
 // app.use([validateInput]);
@@ -28,6 +29,8 @@ app.use(function (req, res, next) {
 });
 
 app.use("/banking", require("./routes/login-route").router);
+app.use("/banking", require("./routes/faq-route").router);
+app.use("/banking", require("./routes/banner-route"));
 
 app.use((req, res, next) => {
     console.log(req.body);
@@ -38,7 +41,7 @@ app.use((req, res, next) => {
         responseDesc: "Unable to process request"
     }
     console.log("Response ", response);
-    return res.status(404).json(response)
+    return res.status(401).json(response)
 
 
 })

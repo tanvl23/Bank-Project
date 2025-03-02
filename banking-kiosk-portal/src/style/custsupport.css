@@ -1,0 +1,62 @@
+.homepage-cust {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Main Content */
+.content-cust {
+  flex: 1;
+  padding-top: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  text-align: center;
+  /* background-color: rgb(255, 255, 255); */
+  background-image:radial-gradient(circle, #d2d1d1, #fcfcf8);
+  min-height: 70vh; 
+}
+
+.cust {
+  display: flex; /* Changed to flex for horizontal alignment */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 40px; /* Space between the two tabs */
+  flex-wrap: nowrap; /* Prevents wrapping */
+}
+
+.cust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px; /* Increased width to make them more visible */
+  height: 350px; /* Adjusted height */
+  border-radius: 10px;
+  background: linear-gradient(to right, #cccdca, #b1d29b); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.cust-item img {
+  width: 170px;
+  height: 170px;
+}
+
+.cust-item p {
+  font-size: 22px;
+  font-weight:bolder;
+  text-decoration: solid;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Only show two items at a time */
+.cust-item.hidden {
+  display: none;
+}
+
+.cust-item a {
+  text-decoration: none;
+  text-transform:uppercase;
+}

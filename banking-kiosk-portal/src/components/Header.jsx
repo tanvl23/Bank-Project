@@ -1,5 +1,5 @@
 import React from 'react';
-// import './Header.css';
+import '../style/Header.css';
 import bankIcon from '../assets/bank.png';
 import { Link } from 'react-router-dom';
 
@@ -11,22 +11,16 @@ const Header = () => {
       <div className="header">
         <div className='dashboard-logo'>
         <img src={bankIcon} alt="Bank Logo" className="bank-logo" />
-        <h1>ABC BANK</h1>
-        </div>
-        <div className="icons">
-          <input type="text" placeholder="Search" />
-          <select>
-            <option value="All">All</option>
-            <option value="Services">
-              <Link to = "/bank-services"> 
-              </Link> </option>
-          </select>
+            <h1 className="shiny-text">GLOBAL BANK</h1>
+             <Link to="/faq" className='nav'>
+              <p>Chat</p>
+            </Link>
         </div>
         </div>
         <div className="title-bar">
-          {/* Back Button */}
+            
           <div className="nav-links">
-            <Link to="/" className='nav'>
+            <Link to="/dashboard" className='nav'>
               <p>Home</p>
             </Link>
             <Link to="/accinfo" className='nav'>
@@ -41,10 +35,13 @@ const Header = () => {
             <Link to="/custsupport" className='nav'>
               <p>Customer Support</p>
             </Link>
+           
+            
+        
           </div>
       </div>
     </div>
   );
 }
 
-export default Header; 
+export default Header
